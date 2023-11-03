@@ -1,0 +1,17 @@
+.portfolio-header{
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    border-radius: 8px;
+    gap: 24px;
+    background: var(--base-white);
+    padding: 14px;
+    margin: 0px auto;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 8px;
+    .portfolio-header-menu{
+        display: flex;
+    }
+}
