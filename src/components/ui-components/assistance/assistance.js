@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
-import { portfolioContext } from "../../portfolio/portfolio";
 import { Button } from "@mui/material";
+import { PortfolioContext } from "../portfolio-context/portfolio-context";
 
 const Assistance = () => {
     const [transcript, setTranscript] = useState('')
     const [response, setResponse] = useState('')
-    const [theme, setTheme] = useContext(portfolioContext);
+    const { theme, setTheme } = PortfolioContext();
 
     useEffect(() => {
         assistance();

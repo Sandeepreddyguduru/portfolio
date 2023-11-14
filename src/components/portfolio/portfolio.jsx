@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import Trans from "../ui-components/translator/trans";
 import './portfolio.scss';
 import Assistance from "../ui-components/assistance/assistance";
@@ -7,20 +7,19 @@ import Footer from "../ui-components/footer/footer";
 import Home from "../ui-components/home/home";
 import About from "../ui-components/about/about";
 import Lab from '../ui-components/lab/lab';
+import { PortfolioContext } from "../ui-components/portfolio-context/portfolio-context";
 
-export const portfolioContext = createContext();
+
+// export const portfolioContext = createContext();
 // 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
 const Portfolio = () => {
-    const [theme, setTheme] = useState('');
-    const [page, setPage] = useState('home')
+    const { page, theme } = PortfolioContext();
 
     return (
-        <portfolioContext.Provider value={[
-            theme, setTheme, setPage
-        ]}>
-            <div className={`portfolio-main-app h-100${theme ? ' dark-theme' : ' light-theme'}`}>
+        <>
+            <div className={`portfolio-main-app h-100${!theme ? ' dark-theme' : ' light-theme'}`}>
                 <div className="portfolio-content">
-                    <Header setPage={setPage} />
+                    <Header />
                     {page?.toLocaleLowerCase() === 'home' && <Home />}
                     {page?.toLocaleLowerCase() === 'about' && <About />}
                     {page?.toLocaleLowerCase() === 'lab' && <Lab />}
@@ -29,7 +28,7 @@ const Portfolio = () => {
                 <div><Trans Translate={'welcome'}></Trans></div> */}
                 </div>
             </div>
-        </portfolioContext.Provider>
+        </>
     )
 }
 export default Portfolio;

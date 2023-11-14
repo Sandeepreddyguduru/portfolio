@@ -1,10 +1,10 @@
-import React, { useContext, useState } from "react";
-import { portfolioContext } from "../../portfolio/portfolio";
+import React, {useContext, useState } from "react";
 import Snackbar from '@mui/material/Snackbar';
 import { motion } from "framer-motion";
+import { PortfolioContext } from "../portfolio-context/portfolio-context";
 
 const ThemeToggler = () => {
-    const [theme, setTheme] = useContext(portfolioContext);
+    const {theme, setTheme } = PortfolioContext()
     const [update, setUpdate] = useState(false);
     return (
         <>
