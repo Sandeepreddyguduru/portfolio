@@ -1,0 +1,28 @@
+.section-title {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 600;
+  gap: 14px;
+  // padding: 0px 0px 20px 0px;
+  .section-text-light {
+    color: var(--base-white);
+    opacity: 0.5;
+  }
+  .section-text-high-light {
+    color: var(--base-white);
+  }
+}
+
+.portfolio-button {
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  background: #ffffff33;
+  backdrop-filter: blur(1.1px);
+  color: var(--base-white);
+  // transition: all 0.1s ease;
+  &:hover {
+    background: #ffffff50;
+  }
+}

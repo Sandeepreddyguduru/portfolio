@@ -1,0 +1,141 @@
+.portfolio-about {
+  padding: 80px 0px 0px 0px;
+  .portfolio-main-header {
+    height: 100%;
+    .owner-name {
+      text-align: center;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center !important;
+      position: relative;
+      .owner-name-outline {
+        // color: #fff;
+        font-size: 140px;
+        font-weight: bolder;
+        -webkit-text-fill-color: inherit;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: #ffffff4a;
+        // line-height: 80px;
+      }
+      .owner-full-name {
+        color: #fff;
+        font-size: 40px;
+        font-weight: 600;
+        position: absolute;
+      }
+    }
+    .owner-designation-main {
+      display: flex;
+      justify-content: center;
+      align-items: center !important;
+      gap: 15px;
+      .owner-designation {
+        color: #fff;
+        font-size: 20px;
+      }
+      .dash-line {
+        width: 10%;
+        height: 1px;
+        background: #fff;
+      }
+    }
+  }
+  .experience-container {
+    .experience-cards {
+      display: flex;
+      justify-content: center;
+      align-items: center !important;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      // max-width: 600px;
+      .experience-card {
+        width: 100%;
+        max-width: 900px;
+        background: #f5f5f5cc;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .org-info {
+          display: flex;
+          align-items: center !important;
+          gap: 6px;
+          .org-name {
+            font-size: 16px;
+            font-weight: bold;
+          }
+          .dot {
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+            top: -4px;
+            line-height: 3px;
+          }
+          .org-info {
+            font-size: 12px;
+          }
+        }
+        .org-role {
+        }
+        .experience-info {
+        }
+      }
+    }
+  }
+  .technical-container {
+    .technical-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      .tech-card {
+        width: 150px;
+        height: 150px;
+        border-radius: 8px;
+        background: #f5f5f5cc;
+        position: relative;
+        .tech-card-img {
+          width: 100%;
+          // height: 100%;
+        }
+        .tech-name {
+          text-align: center;
+          color: #fff;
+          font-size: 14px;
+          border-radius: inherit;
+          // font-weight: 600;
+          background: #000000bd;
+          position: absolute;
+          bottom: 4px;
+          left: 4px;
+          right: 4px;
+        }
+      }
+    }
+  }
+  .work-together-container {
+    .section-text-high-light {
+      text-align: center;
+      color: #fff;
+      font-size: 50px;
+      font-weight: 600;
+    }
+    .contact-details {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      color: #fff;
+      .contact-phone {
+        color: #fff;
+        text-underline-offset: 5px;
+      }
+      .contact-email {
+        color: #fff;
+        text-underline-offset: 5px;
+      }
+    }
+  }
+}
