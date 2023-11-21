@@ -11,6 +11,8 @@ const rootReducer = (state = initialState, action) => {
     switch (action?.type) {
         case TYPE.UPDATE_LANGUAGE:
             return { ...state, language: action.payload }
+        case TYPE.UPDATE_THEME:
+            return { ...state, appTheme: action.payload }
         default:
             return state
     }

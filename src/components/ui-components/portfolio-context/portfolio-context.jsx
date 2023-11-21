@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 const AppContext = createContext();
 export const PortfolioContext = () => useContext(AppContext);
 
-const AppProvider = ({ children, language }) => {
+const AppProvider = ({ children, language, appTheme }) => {
     const [theme, setTheme] = useState(true);
     const [page, setPage] = useState('Home');
 
@@ -13,7 +13,8 @@ const AppProvider = ({ children, language }) => {
         <AppContext.Provider value={{
             theme, setTheme,
             page, setPage,
-            language
+            language,
+            appTheme
         }}
         >
             {children}
@@ -22,9 +23,9 @@ const AppProvider = ({ children, language }) => {
 };
 
 const mapStateToProps = (state) => {
-    const { language } = state;
+    const { language, appTheme } = state;
     return {
-      language
+        language, appTheme
     }
   }
   

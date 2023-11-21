@@ -13,11 +13,11 @@ import { PortfolioContext } from "../ui-components/portfolio-context/portfolio-c
 // export const portfolioContext = createContext();
 // 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
 const Portfolio = () => {
-    const { page, theme } = PortfolioContext();
+    const { page, appTheme } = PortfolioContext();
 
     return (
         <>
-            <div className={`portfolio-main-app h-100${!theme ? ' dark-theme' : ' light-theme'}`}>
+            <div className={`portfolio-main-app h-100 ${appTheme}-theme`}>
                 <div className="portfolio-content">
                     <Header />
                     {page?.toLocaleLowerCase() === 'home' && <Home />}

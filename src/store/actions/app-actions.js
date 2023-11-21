@@ -6,3 +6,9 @@ export function updateLanguage(payload) {
         payload
     }
 }
+export function updateTheme(payload) {
+    return {
+        type: TYPE.UPDATE_THEME,
+        payload
+    }
+}
