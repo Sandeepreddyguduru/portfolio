@@ -53,7 +53,10 @@ const Home = () => {
                         <div className="section-text-high-light"><Trans Translate={'home.intro.section.title2'}></Trans></div>
                     </div>
                     <div className="section-content">
-                        <Trans Translate={'home.intro.description1'}></Trans>
+                        <p><Trans Translate={'home.intro.description.content1'}></Trans></p>
+                        <p><Trans Translate={'home.intro.description.content2'}></Trans></p>
+                        <p><Trans Translate={'home.intro.description.content3'}></Trans></p>
+                        <p><Trans Translate={'home.intro.description.content4'}></Trans></p>
                     </div>
                     <motion.button
                         layout

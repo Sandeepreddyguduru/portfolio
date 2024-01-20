@@ -168,7 +168,7 @@ const Assistance = () => {
                 dispatch(toggleVoice(true));
                 setAIVoice('Voice over enabled')
             }
-        },
+        }, 
         {
             command: ['mute (assistance) voice', '(off) (disable) Voice over (off) (disable)'],
             callback: () => {
