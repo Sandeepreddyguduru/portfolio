@@ -8,7 +8,25 @@ export function updateLanguage(payload) {
 }
 export function updateTheme(payload) {
     return {
-        type: TYPE.UPDATE_THEME,
+    type: TYPE.UPDATE_THEME,
+        payload
+    }
+}
+export function updatePage(payload) {
+    return {
+        type: TYPE.UPDATE_PAGE,
+        payload
+    }
+}
+export function toggleVoice(payload) {
+    return {
+        type: TYPE.UPDATE_TOGGLE_VOICE,
+        payload
+    }
+}
+export function getProd(payload) {
+    return {
+        type: TYPE.GET_PRODUCTS,
         payload
     }
 }

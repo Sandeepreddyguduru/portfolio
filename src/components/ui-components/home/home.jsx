@@ -1,23 +1,18 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Card from "../card/card";
+import { PortfolioContext } from "../portfolio-context/portfolio-context";
+import Trans from "../translator/trans";
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
-    const [selectFeature, setSelectFeature] = useState(null)
+    const [selectFeature, setSelectFeature] = useState(null);
+    const { transcript, response } = PortfolioContext();
 
-    const carousel = [
-        { id: '1', slideName: 'First slide', slideText: 'Some representative placeholder content for the first slide.' },
-        { id: '2', slideName: 'Second slide', slideText: 'Some representative placeholder content for the first slide.' },
-        { id: '3', slideName: 'Third slide', slideText: 'Some representative placeholder content for the first slide.' },
-    ];
-    const features = [
-        { id: '1', title: 'Voice Recognition', text: 'Keyboard free experience' },
-        { id: '2', title: 'Theme Based Portfolio', text: 'you’ll get multiple colours to choose' },
-        { id: '3', title: 'Multi-Langual Support', text: 'Switch between various languages' },
-        { id: '4', title: 'Cross Browsing Ability', text: 'It will run on any browser' },
-        { id: '5', title: 'Fully Responsive', text: 'you’ll have two different variations for web and mobile' },
-        { id: '6', title: 'Sleek Animations', text: 'Smooth experience' }
-    ]
+    const { t } = useTranslation();
+    const carousel = t('home.header', { returnObjects: true });
+    const features = t('home.showcase.features', { returnObjects: true });
+
     return (
         <>
             {/* Carosel */}
@@ -51,16 +46,14 @@ const Home = () => {
 
 
             <section className="portfolio-intro container-fluid">
+                <h2>{transcript} - {response}</h2>
                 <div className=" section container p-5 text-center">
                     <div className="section-title">
-                        <div className="section-text-light">A Brief</div>
-                        <div className="section-text-high-light">Introduction</div>
+                        <div className="section-text-light"><Trans Translate={'home.intro.section.title1'}></Trans></div>
+                        <div className="section-text-high-light"><Trans Translate={'home.intro.section.title2'}></Trans></div>
                     </div>
                     <div className="section-content">
-                        The carousel is a slideshow for cycling through a series of content, built with CSS 3D transforms and a bit of JavaScript. It works with a series of images, text, or custom markup. It also includes support for previous/next controls and indicators.
-                        The carousel is a slideshow for cycling through a series of content, built with CSS 3D transforms and a bit of JavaScript. It works with a series of images, text, or custom markup. It also includes support for previous/next controls and indicators.
-                        The carousel is a slideshow for cycling through a series of content, built with CSS 3D transforms and a bit of JavaScript. It works with a series of images, text, or custom markup. It also includes support for previous/next controls and indicators.
-                        The carousel is a slideshow for cycling through a series of content, built with CSS 3D transforms and a bit of JavaScript. It works with a series of images, text, or custom markup. It also includes support for previous/next controls and indicators.
+                        <Trans Translate={'home.intro.description1'}></Trans>
                     </div>
                     <motion.button
                         layout
@@ -69,7 +62,7 @@ const Home = () => {
                         transition={{ type: "spring", stiffness: 200, damping: 15 }}
                         onClick={() => { }}
                         className="portfolio-button py-3 px-5"
-                    >Know more
+                    ><Trans Translate={'home.intro.knowMore'}></Trans>
                     </motion.button>
                 </div>
             </section>
@@ -78,25 +71,25 @@ const Home = () => {
             <section className="feature-showcase container-fluid">
                 <div className="section container p-5">
                     <div className="section-title">
-                        <div className="section-text-high-light">Feature</div>
-                        <div className="section-text-light">Showcase</div>
+                        <div className="section-text-high-light"><Trans Translate={'home.showcase.section.title1'}></Trans></div>
+                        <div className="section-text-light"><Trans Translate={'home.showcase.section.title2'}></Trans></div>
                     </div>
 
-                    <div className="section-content">The carousel is a slideshow for cycling through a series of content, built with CSS 3D transforms and a bit of JavaScript. It works with a series of images, text, or custom markup. It also includes support for previous/next controls and indicators.</div>
+                    <div className="section-content"><Trans Translate={'home.showcase.title1'}></Trans></div>
                     <div className="features-container row">
                         {features?.map((list, i) => {
                             return (
-                                <>
-                                    <motion.div key={list?.id} layoutId={list?.id}
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        exit={{ opacity: 0 }} onClick={() => setSelectFeature(list)}
-                                        className={`feature col-sm-6 col-md-4${i % 2 !== 0 ? ' even-card' : ' odd-card'}`}>
-                                        <motion.p className="features-count">{list?.id}</motion.p>
-                                        <motion.h3 className="features-title">{list?.title}</motion.h3>
-                                        <motion.p className="features-text">{list?.text}</motion.p>
-                                    </motion.div>
-                                </>
+                                <motion.div key={list?.id}
+                                    layoutId={list?.id}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    // onClick={() => setSelectFeature(list)}
+                                    className={`feature col-sm-6 col-md-4${i % 2 !== 0 ? ' even-card' : ' odd-card'}`}>
+                                    <motion.p className="features-count">{list?.id}</motion.p>
+                                    <motion.h3 className="features-title">{list?.feature}</motion.h3>
+                                    <motion.p className="features-text">{list?.text}</motion.p>
+                                </motion.div>
                             )
                         })}
                     </div>

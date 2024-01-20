@@ -1,10 +1,12 @@
+@import "../../ui-components/common-scss/theme-scss/dark-theme.scss";
+@import "../../ui-components/common-scss/theme-scss/light-theme.scss";
+
 .portfolio-lab {
   padding: 80px 0px 0px 0px;
   text-align: center;
-  color: #fff;
   .portfolio-lab-header {
     height: 200px;
-    color: #fff;
+    color: var(--base-white);
     .portfolio-lab-header-title {
       font-size: 70px;
       font-weight: 600;
@@ -18,7 +20,7 @@
       text-align: left;
     }
     .lab-section-under-line {
-      color: #fff;
+      color: var(--base-white);
       text-align: left;
     }
   }

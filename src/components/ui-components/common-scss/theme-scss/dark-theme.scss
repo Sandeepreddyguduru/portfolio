@@ -1,4 +1,27 @@
 .dark-theme{
-    --base-white: #000;
-    --base-black: #fff;
+    --base-white: #fff;
+    --base-black: #000;
+
+    --theme-bg: #1C1D21;
+
+    --card-bg: rgba(33, 37, 41, 0.75);
+
+    //header
+    --header-bg: #ffffffb0;
+    --header-border: #212529bf;
+
+    //home
+        // know more
+        --know-more-btn-bg: #ffffff33;
+        --know-more-btn-bg-hover: #ffffff50;
+        
+        //feature
+        --feature-even-bg: #c2c2c2;
+
+    //about
+    --owner-name-fill: inherit;
+    --owner-name-stroke: #ffffff4a;
+
+    //
+    --right-reserved: #ffffff80
 }

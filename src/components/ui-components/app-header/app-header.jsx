@@ -7,36 +7,36 @@ import { PortfolioContext } from "../portfolio-context/portfolio-context";
 
 const Header = (props) => {
     // let { setPage } = useContext(PortfolioContext);
-    const {setPage} = PortfolioContext()
+    const {setPage, page, headerLists} = PortfolioContext()
     const [active, setActive] = useState(1)
-    const headerList = [
-        { id: 1, name: 'Home' }, { id: 2, name: 'About' }, { id: 3, name: 'Lab' }
-    ]
+
     return (
-        <div className="portfolio-header">
-            {/* <div className="portfolio-header-logo">Sandeep</div> */}
-            <div className="portfolio-tabs d-flex gap-2 align-items-center">
-                {headerList?.map((list, i) => {
-                    return (
-                        <div key={i} className="portfolio-tab" onClick={(e) => { e?.stopPropagation(); setActive(list?.id); setPage(list?.name) }}>
-                            <div className={`portfolio-tab-text${list?.id === active ? ' active-tab' : ''}`}>{list?.name}</div>
-                            {list?.id === active && <motion.div layoutId='active-pill' transition={{duration: 0.2}} className="active"></motion.div>}
-                        </div>
-                    )
-                })}
-                {/* } */}
-                {/* <div className="portfolio-tab" onClick={(e) => { e?.stopPropagation(); props?.setPage('about') }}>
+        <>
+            <div className="portfolio-header">
+                {/* <div className="portfolio-header-logo">Sandeep</div> */}
+                <div className="portfolio-tabs d-flex gap-2 align-items-center">
+                    {headerLists?.map((list, i) => {
+                        return (
+                            <div key={i} className="portfolio-tab" onClick={(e) => { e?.stopPropagation(); setActive(list?.id); setPage(list?.name) }}>
+                                <div className={`portfolio-tab-text${list?.name === page ? ' active-tab' : ''}`}>{list?.name}</div>
+                                {list?.name === page && <motion.div layoutId='active-pill' transition={{ duration: 0.2 }} className="active"></motion.div>}
+                            </div>
+                        )
+                    })}
+                    {/* } */}
+                    {/* <div className="portfolio-tab" onClick={(e) => { e?.stopPropagation(); props?.setPage('about') }}>
                     About */}
-                {/* <div className="portfolio-tab-about">About</div> */}
-                {/* <div className="portfolio-tab-owner">SANDEEP</div> */}
-                {/* </div>
+                    {/* <div className="portfolio-tab-about">About</div> */}
+                    {/* <div className="portfolio-tab-owner">SANDEEP</div> */}
+                    {/* </div>
                 <div className="portfolio-tab" onClick={(e) => { e?.stopPropagation(); props?.setPage('lab') }}>Lab</div> */}
+                </div>
             </div>
-            {/* <div className="portfolio-header-menu">
-            <ThemeToggler />
-                <LanguageSelector />
-            </div> */}
-        </div>
+            <div className="portfolio-header-menu portfolio-header">
+                    {/* <ThemeToggler />
+                    <LanguageSelector /> */}
+                </div>
+        </>
     )
 }
 export default Header;

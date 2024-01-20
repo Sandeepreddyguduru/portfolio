@@ -1,0 +1,24 @@
+.portfolio-header-menu{
+    display: flex;
+    z-index: 99;
+    position: fixed;
+    transform: none !important; 
+    top: 14px;
+    right: 20px;
+    left: unset !important;
+    .header-btn{
+        width: 100%;
+        border-radius: inherit;
+        // padding: 4px;
+        .theme-btn{
+            width: 100%;
+            background-color: #fff;
+            border-radius: inherit;
+            border: none;
+        }
+    }
+    &.active{
+        width: 100px;
+        height: 200px;
+    }
+}

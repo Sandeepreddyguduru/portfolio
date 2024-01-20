@@ -1,6 +1,25 @@
 .light-theme{
-    --base-white: #fff;
-    --base-black: #000;
+    --base-white: #000;
+    --base-black: #fff;
 
-    --theme-bg: #1C1D21;
+    --theme-bg: #dadcdf;  
+    --card-bg: #f5f5f5cc;
+    //header
+    --header-bg: #e9ecefbf;
+    --header-border: #f8f9fa;
+
+    //home
+        // know more
+        --know-more-btn-bg: #e9ecef;
+        --know-more-btn-bg-hover: #f0f0f0;
+
+        //feature
+        --feature-even-bg: #f0f0f0;
+
+    //about
+        --owner-name-fill: #f9f9f9;
+        --owner-name-stroke: #00000017;
+
+    //
+    --right-reserved: #00000080
 }

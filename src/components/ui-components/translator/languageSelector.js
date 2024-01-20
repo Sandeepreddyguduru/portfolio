@@ -15,7 +15,7 @@ function LanguageSelector() {
   };
 
   return (
-    <div>
+    <div className="btn">
       <button className="btn" onClick={() => changeLanguage('en')}>English</button>
       <button className="btn" onClick={() => changeLanguage('tel')}>Telugu</button>
       {/* <Button variant="contained">Text</Button> */}

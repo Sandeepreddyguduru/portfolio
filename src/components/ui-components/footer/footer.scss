@@ -1,11 +1,11 @@
 .footer {
-  color: #fff;
+  color: var(--base-white);
   .footer-copy-right {
     font-size: 10px;
-    color: #ffffff80;
+    color: var(--right-reserved);
   }
   .owner-email {
-    color: #fff;
+    color: var(--base-white);
     // text-decoration: none;
     text-decoration: underline;
     text-underline-offset: 5px;

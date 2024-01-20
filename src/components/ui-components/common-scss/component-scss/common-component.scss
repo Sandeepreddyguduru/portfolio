@@ -18,11 +18,11 @@
   border: none;
   outline: none;
   border-radius: 50px;
-  background: #ffffff33;
+  background: var(--know-more-btn-bg);
   backdrop-filter: blur(1.1px);
   color: var(--base-white);
   // transition: all 0.1s ease;
   &:hover {
-    background: #ffffff50;
+    background: var(--know-more-btn-bg-hover);
   }
 }

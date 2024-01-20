@@ -3,6 +3,8 @@ html, body, #root,
   // font-family: 'Inter';
   font-family: sans-serif;
   height: 100%;
+  overflow-x: hidden;
+    overflow-y: auto;
 }
 @font-face {
   font-family: 'Inter';
