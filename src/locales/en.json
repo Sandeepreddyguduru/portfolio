@@ -5,18 +5,18 @@
     "header": [
       {
         "id": "1",
-        "slideName": "First slide",
-        "slideText": "Some representative placeholder content for the first slide."
+        "slideName": "Voice Recognition",
+        "slideText": "Voice recognition technology enables hands-free interaction with devices, converting spoken words into text or commands for seamless communication and control."
       },
       {
         "id": "2",
-        "slideName": "Second slide",
-        "slideText": "Some representative placeholder content for the first slide."
+        "slideName": "Multi language Support",
+        "slideText": "Multi-language support enhances accessibility, allowing users to engage with content in their preferred language for a more inclusive and user-friendly experience."
       },
       {
         "id": "3",
-        "slideName": "Third slide",
-        "slideText": "Some representative placeholder content for the first slide."
+        "slideName": "Fully Responsive with Animation",
+        "slideText": "Fully responsive with animation, our design adapts seamlessly to various devices while incorporating engaging and dynamic visual elements for an enhanced user experience."
       }
     ],
     "intro": {
@@ -54,7 +54,7 @@
         },
         {
           "id": "3",
-          "feature": "Multi-Langual Support",
+          "feature": "Multi-Lingual  Support",
           "text": "Switch between various languages"
         },
         {
@@ -194,7 +194,7 @@
     "multiLangual": {
       "section": {
         "title1": "Multi",
-        "title2": "Langual"
+        "title2": "Lingual"
       },
       "description": {
         "content1": "I am pleased to announce the successful implementation of multi-language support on my platform, featuring Telugu, Hindi, and English languages. This enhancement is designed to cater to a diverse user base and ensure a more inclusive and accessible experience. As part of our commitment to linguistic diversity, I am actively working on introducing support for additional languages, with a focus on incorporating all popular languages in India.",
