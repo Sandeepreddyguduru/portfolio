@@ -154,7 +154,7 @@ const Assistance = () => {
 
         // truning ON/OFF voice
         {
-            command: ['read (ouput) (message) (recipt)', 'speak (ouput) (message)'],
+            command: ['read (ouput) (message) (recipt)', 'speak (ouput) (message)', '(start) (enable) (on) Voice over (on) (start) (enable)',],
             callback: () => {
                 dispatch(toggleVoice(true));
                 setAIVoice('Voice over enabled')
