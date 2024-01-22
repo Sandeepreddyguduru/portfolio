@@ -18,17 +18,20 @@ const Home = () => {
             {/* Carosel */}
             <div id="carouselExampleCaptions" className="carousel slide">
                 <div className="carousel-indicators">
-                    {carousel?.map((slide, i) => <button key={slide?.id} type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to={i} className={i === 1 ? 'active' : ''} aria-current="true" aria-label={`Slide ${i + 1}`}></button>)}
+                    {carousel?.map((slide, i) => <button key={slide?.id} type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to={i} className={i === 0 ? 'active' : ''} aria-current="true" aria-label={`Slide ${i + 1}`}></button>)}
                 </div>
                 <div className="carousel-inner h-100">
                     {carousel?.map((slide, i) => {
                         return (
-                            <div key={slide?.id} className={`carousel-item h-100${i === 1 ? ' active' : ''}`}>
+                            <div key={slide?.id} className={`carousel-item h-100${i === 0 ? ' active' : ''}`}>
                                 {/* <img src="..." className="d-block w-100" alt="..."> */}
-                                <h1 className="carousel-title d-flex h-100 w-100 justify-content-center align-items-center">{slide?.slideName}</h1>
-                                <div className="carousel-caption d-none d-md-block">
-                                    <p className="carousel-info">{slide?.slideText}</p>
+                                <div className="d-flex h-100 w-100 justify-content-center align-items-center text-center flex-column">
+                                    <p className="carousel-title">{slide?.slideName}</p>
+                                    <p className="container carousel-info">{slide?.slideText}</p>
                                 </div>
+                                {/* <div className="carousel-caption d-none d-md-block">
+                                    <p className="carousel-info">{slide?.slideText}</p>
+                                </div> */}
                             </div>
                         )
                     })}
@@ -53,7 +56,8 @@ const Home = () => {
                         <div className="section-text-high-light"><Trans Translate={'home.intro.section.title2'}></Trans></div>
                     </div>
                     <div className="section-content">
-                        <Trans Translate={'home.intro.description1'}></Trans>
+                        <p><Trans Translate={'home.intro.description.content1'}></Trans><Trans Translate={'home.intro.description.content2'}></Trans></p>
+                        <p><Trans Translate={'home.intro.description.content3'}></Trans><Trans Translate={'home.intro.description.content4'}></Trans></p>
                     </div>
                     <motion.button
                         layout

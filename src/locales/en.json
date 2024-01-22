@@ -5,18 +5,18 @@
     "header": [
       {
         "id": "1",
-        "slideName": "First slide",
-        "slideText": "Some representative placeholder content for the first slide."
+        "slideName": "Voice Recognition",
+        "slideText": "Voice recognition technology enables hands-free interaction with devices, converting spoken words into text or commands for seamless communication and control."
       },
       {
         "id": "2",
-        "slideName": "Second slide",
-        "slideText": "Some representative placeholder content for the first slide."
+        "slideName": "Multi language Support",
+        "slideText": "Multi-language support enhances accessibility, allowing users to engage with content in their preferred language for a more inclusive and user-friendly experience."
       },
       {
         "id": "3",
-        "slideName": "Third slide",
-        "slideText": "Some representative placeholder content for the first slide."
+        "slideName": "Fully Responsive with Animation",
+        "slideText": "Fully responsive with animation, our design adapts seamlessly to various devices while incorporating engaging and dynamic visual elements for an enhanced user experience."
       }
     ],
     "intro": {
@@ -24,8 +24,13 @@
         "title1": "A Brief",
         "title2": "Introduction"
       },
-      "description": "As a seasoned senior software engineer with more than 5 years of experience, I have honed my expertise in web development, specializing in key technologies like React JS, JavaScript, HTML, and CSS. My commitment to excellence is reflected in a track record of delivering high-quality solutions that seamlessly blend functionality with a visually appealing design. I am deeply passionate about my work, approaching each project with enthusiasm and a results-oriented mindset. My proficiency in React JS enables me to create scalable and efficient user interfaces, while my mastery of JavaScript, HTML, and CSS ensures a holistic and engaging user experience. I thrive in collaborative environments, effectively communicating complex technical concepts and contributing to cross-functional teams. My professional journey underscores adaptability and continuous growth, making me well-equipped to tackle the evolving challenges of web development. I am eager to leverage my skills and passion to contribute to projects that demand cutting-edge solutions and a commitment to excellence.",
-      "description1": "As an accomplished senior software engineer with over 5 years of expertise, my portfolio serves as a testament to a distinguished career marked by a focus on key technologies and a commitment to excellence in web development. Specializing in prominent frameworks such as React JS, I demonstrate a proficiency in creating scalable and visually compelling user interfaces that elevate the overall user experience.  My professional journey reflects a passion for innovation, with a consistent track record of delivering high-quality solutions that seamlessly integrate functionality and aesthetics. With a keen eye for detail, I ensure that each project showcases not only technical prowess but also a commitment to user-centric design principles.  In addition to my technical acumen, I bring a collaborative spirit to the table, effectively communicating intricate technical concepts and contributing seamlessly to cross-functional teams. My portfolio encapsulates a diverse range of projects, each highlighting adaptability, continuous growth, and a forward-thinking approach to address the dynamic challenges of web development.  Emphasizing a results-oriented mindset, I am enthusiastic about leveraging my skills to contribute to projects that demand cutting-edge solutions and a dedication to achieving excellence in the ever-evolving landscape of web development. Explore my portfolio to witness a synthesis of technical expertise, creative finesse, and a passion for pushing the boundaries of what is achievable in web development.",
+      "description1": "As a seasoned senior software engineer with more than 5 years of experience, I have honed my expertise in web development, specializing in key technologies like React JS, JavaScript, HTML, and CSS. My commitment to excellence is reflected in a track record of delivering high-quality solutions that seamlessly blend functionality with a visually appealing design. I am deeply passionate about my work, approaching each project with enthusiasm and a results-oriented mindset. My proficiency in React JS enables me to create scalable and efficient user interfaces, while my mastery of JavaScript, HTML, and CSS ensures a holistic and engaging user experience. I thrive in collaborative environments, effectively communicating complex technical concepts and contributing to cross-functional teams. My professional journey underscores adaptability and continuous growth, making me well-equipped to tackle the evolving challenges of web development. I am eager to leverage my skills and passion to contribute to projects that demand cutting-edge solutions and a commitment to excellence.",
+      "description":{
+        "content1": "As an accomplished senior software engineer with over 5 years of expertise, my portfolio serves as a testament to a distinguished career marked by a focus on key technologies and a commitment to excellence in web development. Specializing in prominent frameworks such as React JS, I demonstrate a proficiency in creating scalable and visually compelling user interfaces that elevate the overall user experience.",
+        "content2": "My professional journey reflects a passion for innovation, with a consistent track record of delivering high-quality solutions that seamlessly integrate functionality and aesthetics. With a keen eye for detail, I ensure that each project showcases not only technical prowess but also a commitment to user-centric design principles.",
+        "content3": "In addition to my technical acumen, I bring a collaborative spirit to the table, effectively communicating intricate technical concepts and contributing seamlessly to cross-functional teams. My portfolio encapsulates a diverse range of projects, each highlighting adaptability, continuous growth, and a forward-thinking approach to address the dynamic challenges of web development.",
+        "content4": "Emphasizing a results-oriented mindset, I am enthusiastic about leveraging my skills to contribute to projects that demand cutting-edge solutions and a dedication to achieving excellence in the ever-evolving landscape of web development. Explore my portfolio to witness a synthesis of technical expertise, creative finesse, and a passion for pushing the boundaries of what is achievable in web development."
+      },
       "description2": "Experienced senior software engineer with over 5 years in web development, specializing in front-end technologies such as React JS, JavaScript, HTML, and CSS. Committed to delivering high-quality solutions, I bring a passion for innovation and a keen eye for detail to every project. My proficiency in crafting dynamic and responsive user interfaces, coupled with effective collaboration skills, positions me as a valuable asset for teams seeking a seasoned professional dedicated to excellence in web development.",
       "knowMore": "Know more"
     },
@@ -40,32 +45,32 @@
         {
           "id": "1",
           "feature": "Voice Recognition",
-          "text": "Keyboard free experience"
+          "text": "hands-free experience"
         },
         {
           "id": "2",
           "feature": "Theme Based Portfolio",
-          "text": "you’ll get multiple colours to choose"
+          "text": "You will have various colors to choose from"
         },
         {
           "id": "3",
-          "feature": "Multi-Langual Support",
+          "feature": "Multi-Lingual  Support",
           "text": "Switch between various languages"
         },
         {
           "id": "4",
           "feature": "Cross Browsing Ability",
-          "text": "It will run on any browser"
+          "text": "It is compatible with all browsers."
         },
         {
           "id": "5",
           "feature": "Fully Responsive",
-          "text": "you’ll have two different variations for web and mobile"
+          "text": "You will have two distinct options for both web and mobile versions"
         },
         {
           "id": "6",
           "feature": "Sleek Animations",
-          "text": "Smooth experience"
+          "text": "Enjoy the captivating feel of smooth animations"
         }
       ]
     }
@@ -189,7 +194,7 @@
     "multiLangual": {
       "section": {
         "title1": "Multi",
-        "title2": "Langual"
+        "title2": "Lingual"
       },
       "description": {
         "content1": "I am pleased to announce the successful implementation of multi-language support on my platform, featuring Telugu, Hindi, and English languages. This enhancement is designed to cater to a diverse user base and ensure a more inclusive and accessible experience. As part of our commitment to linguistic diversity, I am actively working on introducing support for additional languages, with a focus on incorporating all popular languages in India.",

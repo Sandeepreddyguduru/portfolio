@@ -158,7 +158,9 @@ const Assistance = () => {
             callback: () => {
                 dispatch(toggleVoice(true));
                 setAIVoice('Voice over enabled')
-            }
+            },
+            isFuzzyMatch: true,
+            fuzzyMatchingThreshold: 0.5,
         },
         {
             command: ['speak'],
@@ -166,15 +168,17 @@ const Assistance = () => {
                 dispatch(toggleVoice(true));
                 setAIVoice('Voice over enabled')
             }
-        },
+        }, 
         {
-            command: ['mute (assistance) voice'],
+            command: ['mute (assistance) voice', '(off) (disable) Voice over (off) (disable)'],
             callback: () => {
                 setAIVoice('Voice over disabling')
                 setTimeout(() => {
                     dispatch(toggleVoice(false))
                 }, 100);
-            }
+            },
+            isFuzzyMatch: true,
+            fuzzyMatchingThreshold: 0.5,
         },
     ]
 

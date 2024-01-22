@@ -19,14 +19,22 @@
       .carousel-title {
         color: var(--base-white);
         font-weight: 700;
-        font-size: 60px;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        // padding: 0px 8rem 0px 8rem;
       }
 
-      .carousel-caption {
-        .carousel-info {
-          color: var(--base-white);
-        }
+      // .carousel-caption {
+      .carousel-info {
+        color: var(--base-white);
+        max-width: 660px;
+
+        // @media (min-width: 768px) {
+        //   padding: 0px;
+        // }
       }
+
+      // }
     }
 
     .carousel-indicators {}
