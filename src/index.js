@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { I18nextProvider } from 'react-i18next';
-import i18n from './src/i18n.js'; // Import your i18n configuration
+import i18n from './i18n'; // Import your i18n configuration
 import './index.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
-import App from './src/App.js';
-import reportWebVitals from './src/reportWebVitals.js';
+import '../node_modules/bootstrap/dist/js/bootstrap.min.js'
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import store from './src/store/store.jsx';
+import store from './store/store.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
