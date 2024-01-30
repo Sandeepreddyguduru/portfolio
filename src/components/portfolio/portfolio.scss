@@ -19,19 +19,21 @@
       .carousel-title {
         color: var(--base-white);
         font-weight: 700;
-        font-size: 3rem;
+        // font-size: 3rem;
+        font-size: clamp(2rem, 4vw, 8rem);
         margin-bottom: 2rem;
+        max-width: 70%;
         // padding: 0px 8rem 0px 8rem;
       }
 
       // .carousel-caption {
       .carousel-info {
         color: var(--base-white);
-        max-width: 660px;
+        max-width: 60%;
 
-        // @media (min-width: 768px) {
-        //   padding: 0px;
-        // }
+        @media (max-width: 425px) {
+          max-width: 70%;
+        }
       }
 
       // }
@@ -54,6 +56,51 @@
         width: 33.33%;
         height: 200px;
         padding: 22px;
+        @media (min-width: 376px) and (max-width: 767px) {
+          width: 50%;
+          height: auto;
+          &:nth-child(3){
+            background: var(--feature-even-bg) !important;
+            color: #000 !important;
+  
+            .features-count {
+              color: #fff !important;
+              background-image: linear-gradient(0deg,
+                  #000 0%,
+                  rgba(0, 0, 0, 0.35) 100%) !important;
+            }
+  
+            .features-title {
+              color: #000 !important;
+            }
+  
+            .features-text {
+              color: #00000080 !important;
+            }
+          }
+          &:nth-child(4){
+            background: #1c1d21 !important;
+            color: #c2c2c2 !important;
+            .features-count {
+              color: #000 !important;
+              background-image: linear-gradient(180deg,
+                  #e0e0e0 0%,
+                  rgba(255, 255, 255, 0.18) 100%) !important;
+            }
+  
+            .features-title {
+              color: #ffffff !important;
+            }
+  
+            .features-text {
+              color: #ffffff80 !important;
+            }
+          }
+        }
+        @media (max-width: 375px) {
+          width: 100%;
+          height: auto;
+        }
 
         .features-count {
           width: 30px;
@@ -134,6 +181,9 @@
     align-items: center;
     flex-direction: column;
     gap: 40px;
+    @media only screen and (max-width: 425px) {
+      gap: 25px;
+    }
 
     .section-content {
       color: var(--base-white);

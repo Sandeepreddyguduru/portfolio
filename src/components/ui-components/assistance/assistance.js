@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { MicOff } from '@mui/icons-material';
 import './assistance.scss';
 import { PortfolioContext } from '../portfolio-context/portfolio-context';
-import { updateTheme, toggleVoice } from '../../../store/actions/app-actions';
+import { updateTheme, toggleVoice, updateLanguage } from '../../../store/actions/app-actions';
 import { useDispatch } from 'react-redux';
 import useMeasure from 'react-use-measure'
 
@@ -115,6 +115,14 @@ const Assistance = () => {
             },
         },
 
+        // translate
+        // {
+        //     command: ['change (translate) (change) (language) (to) (telugu) (language)'],
+        //     callback: () => {
+        //         dispatch(updateLanguage('tel'));
+        //         setMessage('Changing language telugu')
+        //     },
+        // },
 
 
         // 
@@ -151,10 +159,11 @@ const Assistance = () => {
                 resetTranscript(); setMessage('')
             }
         },
+        
 
         // truning ON/OFF voice
         {
-            command: ['read (ouput) (message) (recipt)', 'speak (ouput) (message)', '(start) (enable) (on) Voice over (on) (start) (enable)',],
+            command: ['read (ouput) (message) (recipt)', 'speak', 'speak (ouput) (message)', '(start) (enable) (on) Voice over (on) (start) (enable)',],
             callback: () => {
                 dispatch(toggleVoice(true));
                 setAIVoice('Voice over enabled')
@@ -162,15 +171,15 @@ const Assistance = () => {
             isFuzzyMatch: true,
             fuzzyMatchingThreshold: 0.5,
         },
+        // {
+        //     command: ['speak'],
+        //     callback: () => {
+        //         dispatch(toggleVoice(true));
+        //         setAIVoice('Voice over enabled')
+        //     }
+        // }, 
         {
-            command: ['speak'],
-            callback: () => {
-                dispatch(toggleVoice(true));
-                setAIVoice('Voice over enabled')
-            }
-        }, 
-        {
-            command: ['mute (assistance) voice', '(off) (disable) Voice over (off) (disable)'],
+            command: ['mute (assistance) voice', '(off) (disable) Voice over (off) (disable)', '(turn off) Voice (turn off)'],
             callback: () => {
                 setAIVoice('Voice over disabling')
                 setTimeout(() => {

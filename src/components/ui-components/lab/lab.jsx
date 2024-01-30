@@ -10,7 +10,7 @@ const Lab = () => {
                 {/* <div className="portfolio-lab-header-text"><Trans Translate={'lab.header.description'}></Trans></div> */}
             </div>
 
-            <div className="lab-container container-fluid section p-5">
+            <div className="lab-container container-fluid section">
                 <div className="container">
                     <div className="lab-section py-4">
                         <div className="section-title">
@@ -52,7 +52,7 @@ const Lab = () => {
                     </div>
 
                     <div className="row py-4">
-                        <div className="section-title">
+                        <div className="section-title big-title align-items-start">
                             <div className="section-text-high-light"><Trans Translate={'lab.crossBrowser.section.title1'}></Trans></div>
                             <div className="section-text-light"><Trans Translate={'lab.crossBrowser.section.title2'}></Trans></div>
                         </div>
@@ -82,7 +82,7 @@ const Lab = () => {
                     </div>
 
                     <div className="row py-4">
-                        <div className="section-title">
+                        <div className="section-title big-title align-items-start">
                             <div className="section-text-high-light"><Trans Translate={'lab.animations.section.title1'}></Trans></div>
                             <div className="section-text-light"><Trans Translate={'lab.animations.section.title2'}></Trans></div>
                         </div>

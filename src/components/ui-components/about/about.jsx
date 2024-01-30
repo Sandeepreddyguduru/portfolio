@@ -23,7 +23,7 @@ const About = () => {
                 </div>
             </section>
 
-            <div className="container-fluid section p-5">
+            <div className="container-fluid section">
                 <div className="container py-5">
                     <div className="section-title">
                         <div className="section-text-light"><Trans Translate={'about.aboutMe.section.title1'}></Trans></div>
@@ -100,7 +100,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="technical-container container-fluid section p-5">
+            <div className="technical-container container-fluid section py-5">
                 <div className="container">
                     <div className="section-title">
                         <div className="section-text-high-light"><Trans Translate={'about.technologies.section.title1'}></Trans></div>
@@ -122,7 +122,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="work-together-container container-fluid section p-5">
+            <div className="work-together-container container-fluid section py-5">
                 <div className="container">
                     <div className="section-title">
                         <div className="section-text-light"><Trans Translate={'about.workTogether.section.lets'}></Trans></div>

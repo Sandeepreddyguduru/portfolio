@@ -7,11 +7,26 @@ import { useTranslation } from 'react-i18next';
 
 const Home = () => {
     const [selectFeature, setSelectFeature] = useState(null);
-    const { transcript, response } = PortfolioContext();
+    const { transcript, response, setPage } = PortfolioContext();
 
     const { t } = useTranslation();
     const carousel = t('home.header', { returnObjects: true });
     const features = t('home.showcase.features', { returnObjects: true });
+
+    const introAnimationVarients = {
+        initial: {
+            opacity: 0,
+            y: 100,
+        },
+        animate: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.1,
+                duration: 1
+            }
+        }
+    }
 
     return (
         <>
@@ -49,9 +64,15 @@ const Home = () => {
 
 
             <section className="portfolio-intro container-fluid">
-                <h2>{transcript} - {response}</h2>
-                <div className=" section container p-5 text-center">
-                    <div className="section-title">
+                {/* <h2>{transcript} - {response}</h2> */}
+                <motion.div
+                    key={'intro'}
+                    variants={introAnimationVarients}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{once: true}}
+                    className=" section container py-5 px-3 text-center">
+                    <div className="section-title big-title ">
                         <div className="section-text-light"><Trans Translate={'home.intro.section.title1'}></Trans></div>
                         <div className="section-text-high-light"><Trans Translate={'home.intro.section.title2'}></Trans></div>
                     </div>
@@ -64,16 +85,16 @@ const Home = () => {
                         whileHover={{ scale: 1.04 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                        onClick={() => { }}
+                        onClick={() => { setPage('About') }}
                         className="portfolio-button py-3 px-5"
                     ><Trans Translate={'home.intro.knowMore'}></Trans>
                     </motion.button>
-                </div>
+                </motion.div>
             </section>
 
 
             <section className="feature-showcase container-fluid">
-                <div className="section container p-5">
+                <div className="section container py-5 px-3">
                     <div className="section-title">
                         <div className="section-text-high-light"><Trans Translate={'home.showcase.section.title1'}></Trans></div>
                         <div className="section-text-light"><Trans Translate={'home.showcase.section.title2'}></Trans></div>
