@@ -152,12 +152,14 @@
       },
       "description": "I bring an advanced level of proficiency across a spectrum of technologies, showcasing a steadfast commitment to staying ahead of industry advancements. This comprehensive skill set positions me to make impactful contributions to projects while maintaining alignment with the latest industry standards.",
       "courses": [
-        { "name": "React JS", "type": "library" },
-        { "name": "REDUX", "type": "library" },
-        { "name": "JavaScript", "type": "library" },
-        { "name": "HTML", "type": "library" },
-        { "name": "CSS", "type": "library" },
-        { "name": "Bootstrap", "type": "library" }
+        { "name": "React JS", "type": "react" },
+        { "name": "REDUX", "type": "redux" },
+        { "name": "JavaScript", "type": "javascript" },
+        { "name": "HTML", "type": "html" },
+        { "name": "CSS", "type": "css" },
+        { "name": "SCSS", "type": "scss" },
+        { "name": "Bootstrap", "type": "bootstrap" },
+        { "name": "Framer Motion", "type": "framermotion" }
       ]
     },
     "workTogether": {
