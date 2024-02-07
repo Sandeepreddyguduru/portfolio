@@ -4,6 +4,7 @@ import Card from "../card/card";
 import { PortfolioContext } from "../portfolio-context/portfolio-context";
 import Trans from "../translator/trans";
 import { useTranslation } from 'react-i18next';
+import EastIcon from '@mui/icons-material/East';
 
 const Home = () => {
     const [selectFeature, setSelectFeature] = useState(null);
@@ -82,12 +83,15 @@ const Home = () => {
                     </div>
                     <motion.button
                         layout
-                        whileHover={{ scale: 1.04 }}
+                        // whileHover={{ scale: 1.04 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ type: "spring", stiffness: 200, damping: 15 }}
                         onClick={() => { setPage('About') }}
-                        className="portfolio-button py-3 px-5"
-                    ><Trans Translate={'home.intro.knowMore'}></Trans>
+                        className="portfolio-button"
+                    >
+                        <Trans Translate={'home.intro.knowMore'}></Trans>
+                        <EastIcon/>
+                        <div className="portfolio-button-bg"></div>
                     </motion.button>
                 </motion.div>
             </section>
