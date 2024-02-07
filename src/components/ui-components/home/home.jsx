@@ -4,7 +4,7 @@ import Card from "../card/card";
 import { PortfolioContext } from "../portfolio-context/portfolio-context";
 import Trans from "../translator/trans";
 import { useTranslation } from 'react-i18next';
-import EastIcon from '@mui/icons-material/East';
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 
 const Home = () => {
     const [selectFeature, setSelectFeature] = useState(null);
@@ -90,7 +90,7 @@ const Home = () => {
                         className="portfolio-button"
                     >
                         <Trans Translate={'home.intro.knowMore'}></Trans>
-                        <EastIcon/>
+                        <KeyboardDoubleArrowRightIcon/>
                         <div className="portfolio-button-bg"></div>
                     </motion.button>
                 </motion.div>

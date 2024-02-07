@@ -36,14 +36,15 @@
   padding: 12px 8px 12px 15px;
   gap: 26px;
   transition: all 0.1s ease;
+  box-shadow: 0px 1px 2px -1px;
   &:hover {
-    background: var(--know-more-btn-bg-hover);
+    // background: var(--know-more-btn-bg-hover);
     transition: all 0.1s ease;
     .MuiSvgIcon-root{
       transform: rotate(0deg);
     }
     .portfolio-button-bg{
-      width: 95%;
+      width: 94%;
       padding: 12px 8px 12px 20px;
     }
   }
@@ -60,7 +61,7 @@
     border-radius: 50px;
     background: var(--base-black);
     top: 50%;
-    right: 4px;
+    right: 5px;
     transform: translateY(-50%);
     z-index: -1;
     transition: all 0.3s ease;
