@@ -26,21 +26,57 @@
       },
       "description1": "As a seasoned senior software engineer with more than 5 years of experience, I have honed my expertise in web development, specializing in key technologies like React JS, JavaScript, HTML, and CSS. My commitment to excellence is reflected in a track record of delivering high-quality solutions that seamlessly blend functionality with a visually appealing design. I am deeply passionate about my work, approaching each project with enthusiasm and a results-oriented mindset. My proficiency in React JS enables me to create scalable and efficient user interfaces, while my mastery of JavaScript, HTML, and CSS ensures a holistic and engaging user experience. I thrive in collaborative environments, effectively communicating complex technical concepts and contributing to cross-functional teams. My professional journey underscores adaptability and continuous growth, making me well-equipped to tackle the evolving challenges of web development. I am eager to leverage my skills and passion to contribute to projects that demand cutting-edge solutions and a commitment to excellence.",
       "description":{
-        "content1": "As an accomplished senior software engineer with over 5 years of expertise, my portfolio serves as a testament to a distinguished career marked by a focus on key technologies and a commitment to excellence in web development. Specializing in prominent frameworks such as React JS, I demonstrate a proficiency in creating scalable and visually compelling user interfaces that elevate the overall user experience.",
-        "content2": "My professional journey reflects a passion for innovation, with a consistent track record of delivering high-quality solutions that seamlessly integrate functionality and aesthetics. With a keen eye for detail, I ensure that each project showcases not only technical prowess but also a commitment to user-centric design principles.",
-        "content3": "In addition to my technical acumen, I bring a collaborative spirit to the table, effectively communicating intricate technical concepts and contributing seamlessly to cross-functional teams. My portfolio encapsulates a diverse range of projects, each highlighting adaptability, continuous growth, and a forward-thinking approach to address the dynamic challenges of web development.",
-        "content4": "Emphasizing a results-oriented mindset, I am enthusiastic about leveraging my skills to contribute to projects that demand cutting-edge solutions and a dedication to achieving excellence in the ever-evolving landscape of web development. Explore my portfolio to witness a synthesis of technical expertise, creative finesse, and a passion for pushing the boundaries of what is achievable in web development."
+        "content1": "With over 5 years of experience as a web developer specializing in React, I have a proven track record of delivering high-quality, user-friendly websites and applications. I possess a deep understanding of frontend development principles and am proficient in building interactive and responsive interfaces using React. My expertise also extends to integrating backend APIs, troubleshooting technical issues, and optimizing website performance to enhance user experience.",
+        "content2": "Throughout my career, I have collaborated with cross-functional teams to successfully launch and maintain various web projects, demonstrating strong communication and problem-solving skills. I am adept at staying current with industry trends and technologies, continuously enhancing my skills and knowledge to deliver cutting-edge solutions. My passion for creating innovative and visually appealing web applications, combined with my extensive experience in React development, makes me a valuable asset in any web development team.",
+        "content3": "As an accomplished senior software engineer with over 5 years of expertise, my portfolio serves as a testament to a distinguished career marked by a focus on key technologies and a commitment to excellence in web development. Specializing in prominent frameworks such as React JS, I demonstrate a proficiency in creating scalable and visually compelling user interfaces that elevate the overall user experience.",
+        "content4": "My professional journey reflects a passion for innovation, with a consistent track record of delivering high-quality solutions that seamlessly integrate functionality and aesthetics. With a keen eye for detail, I ensure that each project showcases not only technical prowess but also a commitment to user-centric design principles.",
+        "content5": "In addition to my technical acumen, I bring a collaborative spirit to the table, effectively communicating intricate technical concepts and contributing seamlessly to cross-functional teams. My portfolio encapsulates a diverse range of projects, each highlighting adaptability, continuous growth, and a forward-thinking approach to address the dynamic challenges of web development.",
+        "content6": "Emphasizing a results-oriented mindset, I am enthusiastic about leveraging my skills to contribute to projects that demand cutting-edge solutions and a dedication to achieving excellence in the ever-evolving landscape of web development. Explore my portfolio to witness a synthesis of technical expertise, creative finesse, and a passion for pushing the boundaries of what is achievable in web development."
       },
       "description2": "Experienced senior software engineer with over 5 years in web development, specializing in front-end technologies such as React JS, JavaScript, HTML, and CSS. Committed to delivering high-quality solutions, I bring a passion for innovation and a keen eye for detail to every project. My proficiency in crafting dynamic and responsive user interfaces, coupled with effective collaboration skills, positions me as a valuable asset for teams seeking a seasoned professional dedicated to excellence in web development.",
       "knowMore": "Know more"
     },
+    "skills":[
+      {
+        "id": "1",
+        "title": "Frontend Expertise",
+        "des": "Skilled in HTML, CSS, and JavaScript, with proficiency in modern frameworks like React JS and Angular."
+      },
+      {
+        "id": "2",
+        "title": "Responsive Web Design",
+        "des": "Creates mobile-friendly websites with CSS frameworks."
+      },
+      {
+        "id": "3",
+        "title": "Version Control",
+        "des": "Skilled in using version control systems like Git and code management within development teams."
+      },
+      {
+        "id": "4",
+        "title": "Performance Optimization",
+        "des": "Improves website speed and user experience."
+      },
+      {
+        "id": "5",
+        "title": "User Experience (UX) Design",
+        "des": "Creates intuitive user interfaces."
+      },
+      {
+        "id": "6",
+        "title": "Problem-Solving and Debugging",
+        "des": "Troubleshoots and enhances web functionality."
+      }
+    ],
     "showcase": {
       "section": {
-        "title1": "Feature",
-        "title2": "Showcase"
+        "title1": "Development",
+        "title2": "Services"
       },
+      "title11": "I provide custom web development solutions, creating or updating websites to fit your vision. With expertise and dedication, I ensure quality and functionality. Let's transform your online presence!",
+      "title1": "I specialize in crafting tailored web solutions, whether you're starting fresh or updating an existing site. My services encompass design, development, and optimization to ensure your website is both stunning and efficient. Let's collaborate to elevate your online presence!",
       "title": "Presenting a comprehensive showcase of prominent features within my portfolio, highlighting key attributes and accomplishments to underscore the depth and breadth of my professional expertise.",
-      "title1": "Through my portfolio, I meticulously present a comprehensive array of distinguished features, strategically emphasizing key attributes and notable achievements. This deliberate approach aims to underscore the extensive depth and breadth of my professional expertise, providing a nuanced and compelling representation of my skills and accomplishments.",
+      "title_1": "Through my portfolio, I meticulously present a comprehensive array of distinguished features, strategically emphasizing key attributes and notable achievements. This deliberate approach aims to underscore the extensive depth and breadth of my professional expertise, providing a nuanced and compelling representation of my skills and accomplishments.",
       "features": [
         {
           "id": "1",
@@ -54,7 +90,7 @@
         },
         {
           "id": "3",
-          "feature": "Multi-Lingual  Support",
+          "feature": "Multi-Lingual Support",
           "text": "Switch between various languages"
         },
         {
@@ -104,17 +140,20 @@
       "description": "With a distinguished career spanning numerous years, my professional journey reflects a steadfast commitment to excellence in IT industry. Showcasing a proven ability to demonstrate key skills and accomplishments. My extensive experience is marked by a strategic approach to industry-specific actions, fostering collaborative environments, and consistently driving results that align with organizational goals.",
       "organizations": [
         {
-          "name": "Polyglot IT Solutions",
-          "role": "Software Associate",
+          "name": "Current",
+          "role": "Senior Software Engineer",
           "duration": "",
           "description": [
-            "Embarked on my professional journey with the first company",
-            "Applied learned courses in HTML, CSS, and JS to practical projects",
-            "Designed UX screens for the company's applications",
-            "Seized the opportunity as a Software Associate to contribute comprehensively",
-            "Grateful for the mentorship and guidance of M.D. Sathish Babu, whose support was instrumental in my professional growth"
+            "Senior Software Engineer for Workspace.ai project",
+            "Advanced skills in React JS and JavaScript development",
+            "Collaborated with Product Managers to better understand project requirements",
+            "Worked closely with the React Native team to integrate features as per specifications",
+            "Responsible for end-to-end client-side handling, ensuring a seamless user experience",
+            "Actively shared knowledge to create a friendly and collaborative work environment",
+            "Provided support to other projects within the company, demonstrating a holistic approach to teamwork"
           ]
         },
+
         {
           "name": "Zyclyx",
           "role": "Web Developer",
@@ -130,17 +169,15 @@
           ]
         },
         {
-          "name": "Current",
-          "role": "Senior Software Engineer",
+          "name": "Polyglot IT Solutions",
+          "role": "Software Associate",
           "duration": "",
           "description": [
-            "Senior Software Engineer for Workspace.ai project",
-            "Advanced skills in React JS and JavaScript development",
-            "Collaborated with Product Managers to better understand project requirements",
-            "Worked closely with the React Native team to integrate features as per specifications",
-            "Responsible for end-to-end client-side handling, ensuring a seamless user experience",
-            "Actively shared knowledge to create a friendly and collaborative work environment",
-            "Provided support to other projects within the company, demonstrating a holistic approach to teamwork"
+            "Embarked on my professional journey with the first company",
+            "Applied learned courses in HTML, CSS, and JS to practical projects",
+            "Designed UX screens for the company's applications",
+            "Seized the opportunity as a Software Associate to contribute comprehensively",
+            "Grateful for the mentorship and guidance of M.D. Sathish Babu, whose support was instrumental in my professional growth"
           ]
         }
       ]
@@ -171,7 +208,7 @@
   },
   "lab": {
     "header": {
-      "title": "Laboratory",
+      "title": "'Specifications'",
       "description": ""
     },
     "voiceRecognition": {
@@ -232,6 +269,40 @@
     }
   },
   "footer":{
-    "rights": "All rights reserved by"
+    "rights": "All rights reserved by",
+    "contactDetails": {
+      "description": "I'm a passionate web developer, and i am an urban photographer, i like to travel in to the nature and also i use surfing in internet for coding tips",
+      "call": "Call",
+      "message": "Message",
+      "social":[
+        {"type": "linkedin", "name": "LinkedIn", "link": "https://www.linkedin.com/in/sandeep-reddy-guduru-4b6a98178/", "icon": "<svg width='1000' height='1000' viewBox='0 0 41 41' shape-rendering='crispEdges'><path fill='#FFFFFF' d='M0 0h41v41H0z'/><path stroke='#000000' d='M4 4.5h7m1 0h1m1 0h2m4 0h1m1 0h4m1 0h1m2 0h7M4 5.5h1m5 0h1m1 0h1m3 0h1m1 0h1m1 0h2m2 0h1m1 0h2m2 0h1m5 0h1M4 6.5h1m1 0h3m1 0h1m2 0h1m2 0h5m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1M4 7.5h1m1 0h3m1 0h1m1 0h1m1 0h2m3 0h1m1 0h3m2 0h3m1 0h1m1 0h3m1 0h1M4 8.5h1m1 0h3m1 0h1m2 0h1m1 0h1m4 0h2m1 0h1m1 0h2m1 0h1m1 0h1m1 0h3m1 0h1M4 9.5h1m5 0h1m2 0h1m3 0h1m1 0h3m1 0h1m2 0h1m1 0h1m1 0h1m5 0h1M4 10.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M12 11.5h1m2 0h2m2 0h5m2 0h3M4 12.5h1m1 0h2m1 0h3m1 0h3m2 0h2m1 0h3m1 0h1m4 0h1m2 0h1m1 0h2M4 13.5h5m7 0h2m2 0h1m1 0h2m1 0h1m1 0h1m2 0h2m1 0h2m1 0h1M6 14.5h3m1 0h3m4 0h1m2 0h2m2 0h1m1 0h2m1 0h5m1 0h2M8 15.5h2m1 0h2m1 0h1m4 0h1m4 0h1m2 0h3m1 0h1m1 0h1M4 16.5h1m2 0h8m1 0h1m1 0h1m2 0h4m1 0h2m1 0h1m1 0h3m1 0h1M4 17.5h1m1 0h1m1 0h1m2 0h2m1 0h1m1 0h3m3 0h5m1 0h1m2 0h1m3 0h1M6 18.5h2m1 0h4m4 0h1m2 0h4m1 0h1m2 0h1m1 0h4M7 19.5h2m2 0h6m1 0h3m2 0h1m1 0h1m1 0h1m1 0h2m2 0h2M4 20.5h8m4 0h1m2 0h1m2 0h1m1 0h4m1 0h2m1 0h1m1 0h1M5 21.5h1m1 0h1m1 0h1m4 0h3m1 0h3m3 0h1m1 0h2m2 0h1m1 0h2m1 0h2M4 22.5h2m4 0h5m1 0h1m1 0h2m2 0h1m1 0h1m4 0h1m1 0h2m1 0h2M4 23.5h1m1 0h3m3 0h2m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1m3 0h1m1 0h1m1 0h1m3 0h1M5 24.5h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h5m4 0h1m7 0h2M4 25.5h1m1 0h1m6 0h1m2 0h1m1 0h4m1 0h2m1 0h2m1 0h2m3 0h1m1 0h1M6 26.5h1m1 0h3m1 0h1m1 0h2m1 0h1m3 0h2m1 0h2m1 0h4m1 0h2m1 0h2M5 27.5h1m1 0h3m2 0h2m1 0h1m3 0h1m2 0h3m3 0h1m1 0h1m1 0h1M4 28.5h1m1 0h2m2 0h3m2 0h2m2 0h1m1 0h2m3 0h7m2 0h1M12 29.5h1m3 0h1m1 0h3m2 0h1m4 0h1m3 0h2M4 30.5h7m1 0h1m1 0h1m2 0h1m4 0h2m3 0h2m1 0h1m1 0h1M4 31.5h1m5 0h1m1 0h1m1 0h3m2 0h1m4 0h5m3 0h3m1 0h1M4 32.5h1m1 0h3m1 0h1m3 0h4m1 0h1m1 0h1m3 0h1m1 0h6m1 0h2M4 33.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h1m2 0h2m4 0h3m2 0h1m1 0h2m1 0h1M4 34.5h1m1 0h3m1 0h1m1 0h1m1 0h2m2 0h1m2 0h1m2 0h8m1 0h2M4 35.5h1m5 0h1m3 0h1m1 0h1m1 0h5m3 0h3m2 0h2m3 0h1M4 36.5h7m1 0h2m3 0h2m1 0h3m2 0h1m6 0h3'/></svg>"},
+        {"type": "gitHub", "name": "GitHub", "link": "https://github.com/Sandeepreddyguduru", "icon": "<svg width='1000' height='1000' viewBox='0 0 37 37' shape-rendering='crispEdges'><path fill='#FFFFFF' d='M0 0h37v37H0z'/><path stroke='#000000' d='M4 4.5h7m1 0h2m1 0h1m2 0h1m1 0h1m1 0h3m1 0h7M4 5.5h1m5 0h1m1 0h2m1 0h2m4 0h2m1 0h1m1 0h1m5 0h1M4 6.5h1m1 0h3m1 0h1m2 0h1m2 0h5m3 0h1m1 0h1m1 0h3m1 0h1M4 7.5h1m1 0h3m1 0h1m1 0h1m1 0h2m3 0h3m1 0h1m2 0h1m1 0h3m1 0h1M4 8.5h1m1 0h3m1 0h1m3 0h8m1 0h1m2 0h1m1 0h3m1 0h1M4 9.5h1m5 0h1m2 0h1m2 0h1m1 0h1m3 0h3m1 0h1m5 0h1M4 10.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M12 11.5h2m1 0h4m1 0h3m1 0h1M4 12.5h1m1 0h2m1 0h3m2 0h1m1 0h3m2 0h3m2 0h1m2 0h1m1 0h2M5 13.5h1m1 0h1m1 0h1m1 0h2m2 0h2m3 0h1m1 0h3m1 0h3m3 0h1M4 14.5h2m1 0h2m1 0h2m1 0h1m1 0h1m2 0h1m2 0h2m2 0h1m1 0h1m2 0h2M5 15.5h4m2 0h1m1 0h2m1 0h3m3 0h1m2 0h2m1 0h1m3 0h1M6 16.5h1m1 0h3m1 0h3m4 0h1m1 0h1m2 0h1m4 0h2M4 17.5h1m3 0h1m2 0h2m2 0h1m1 0h1m1 0h4m3 0h1m3 0h3M6 18.5h1m1 0h3m3 0h3m1 0h1m4 0h2m1 0h1m3 0h3M5 19.5h4m4 0h2m1 0h2m1 0h2m1 0h7m2 0h1M4 20.5h1m1 0h1m1 0h1m1 0h3m2 0h2m3 0h1m1 0h3m3 0h2m1 0h1M5 21.5h3m1 0h1m3 0h1m1 0h1m1 0h1m1 0h1m2 0h1m4 0h1m1 0h3M4 22.5h1m1 0h3m1 0h1m2 0h1m5 0h4m1 0h1m1 0h3m1 0h1M8 23.5h1m2 0h1m2 0h3m2 0h3m4 0h3m1 0h1M5 24.5h1m2 0h7m1 0h2m2 0h3m1 0h7M12 25.5h1m4 0h2m1 0h1m1 0h1m1 0h1m3 0h5M4 26.5h7m1 0h1m1 0h1m2 0h1m2 0h5m1 0h1m1 0h2m1 0h1M4 27.5h1m5 0h1m1 0h1m1 0h2m4 0h1m1 0h1m1 0h1m3 0h2m1 0h2M4 28.5h1m1 0h3m1 0h1m2 0h1m4 0h1m1 0h2m2 0h5m1 0h1M4 29.5h1m1 0h3m1 0h1m1 0h5m1 0h4m1 0h1m1 0h1m1 0h3m2 0h1M4 30.5h1m1 0h3m1 0h1m1 0h3m2 0h2m1 0h1m1 0h1m1 0h1m2 0h1m2 0h1m1 0h1M4 31.5h1m5 0h1m3 0h1m2 0h4m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1M4 32.5h7m1 0h1m2 0h4m3 0h5m4 0h1'/></svg>"},
+        {"type": "naukri", "name": "Naukri", "link": "https://www.naukri.com/mnjuser/profile", "icon": "<svg width='1000' height='1000' viewBox='0 0 37 37' shape-rendering='crispEdges'><path fill='#FFFFFF' d='M0 0h37v37H0z'/><path stroke='#000000' d='M4 4.5h7m3 0h1m2 0h1m2 0h4m2 0h7M4 5.5h1m5 0h1m3 0h1m1 0h1m1 0h4m2 0h1m1 0h1m5 0h1M4 6.5h1m1 0h3m1 0h1m1 0h2m5 0h1m4 0h1m1 0h1m1 0h3m1 0h1M4 7.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h2m2 0h1m1 0h1m2 0h1m1 0h3m1 0h1M4 8.5h1m1 0h3m1 0h1m1 0h3m1 0h1m3 0h5m1 0h1m1 0h3m1 0h1M4 9.5h1m5 0h1m1 0h4m2 0h2m4 0h1m1 0h1m5 0h1M4 10.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M12 11.5h2m1 0h2m1 0h1m1 0h1m2 0h2M4 12.5h1m1 0h5m2 0h1m2 0h1m2 0h1m1 0h1m1 0h1m2 0h5M5 13.5h3m3 0h2m1 0h1m2 0h1m2 0h9m3 0h1M8 14.5h1m1 0h2m1 0h2m1 0h6m2 0h1m1 0h1M4 15.5h1m2 0h1m4 0h1m3 0h2m2 0h1m1 0h2m1 0h3m1 0h1m1 0h1M5 16.5h1m1 0h1m2 0h4m1 0h2m1 0h1m2 0h1m7 0h2M4 17.5h1m1 0h1m2 0h1m3 0h4m3 0h7m1 0h1m3 0h1M4 18.5h1m1 0h2m2 0h4m5 0h1m1 0h2m2 0h1m1 0h1m1 0h2M5 19.5h5m4 0h1m1 0h1m1 0h1m3 0h3m2 0h2m2 0h1M7 20.5h4m2 0h1m2 0h1m2 0h3m1 0h1m3 0h1m1 0h2M4 21.5h3m4 0h1m2 0h2m1 0h2m1 0h1m2 0h1m2 0h3m1 0h1m1 0h1M4 22.5h1m1 0h1m1 0h1m1 0h1m1 0h3m2 0h3m4 0h1m2 0h1m2 0h1M4 23.5h1m2 0h1m1 0h1m2 0h1m1 0h1m2 0h1m1 0h1m7 0h2m2 0h1M4 24.5h1m1 0h1m1 0h3m1 0h1m2 0h1m2 0h4m1 0h6m1 0h3M12 25.5h1m1 0h2m4 0h1m3 0h1m3 0h5M4 26.5h7m2 0h3m3 0h6m1 0h1m1 0h3M4 27.5h1m5 0h1m1 0h1m5 0h1m1 0h1m2 0h2m3 0h1m2 0h2M4 28.5h1m1 0h3m1 0h1m1 0h1m2 0h2m4 0h1m2 0h5m1 0h1M4 29.5h1m1 0h3m1 0h1m1 0h1m3 0h3m3 0h1m1 0h1m2 0h1m1 0h4M4 30.5h1m1 0h3m1 0h1m1 0h3m1 0h1m2 0h1m5 0h7M4 31.5h1m5 0h1m3 0h1m1 0h2m5 0h5m1 0h1m1 0h1M4 32.5h7m1 0h3m2 0h1m1 0h3m1 0h1m2 0h5'/></svg>"},
+        {"type": "email", "name": "Email", "link": "mailto:webdev.sandeep.g@gmail.com", "icon": "<svg width='1000' height='1000' viewBox='0 0 41 41' shape-rendering='crispEdges'><path fill='#FFFFFF' d='M0 0h41v41H0z'/><path stroke='#000000' d='M4 4.5h7m2 0h1m2 0h3m1 0h5m2 0h1m2 0h7M4 5.5h1m5 0h1m2 0h1m3 0h5m2 0h1m1 0h1m1 0h1m1 0h1m5 0h1M4 6.5h1m1 0h3m1 0h1m1 0h1m2 0h3m2 0h4m3 0h1m2 0h1m1 0h3m1 0h1M4 7.5h1m1 0h3m1 0h1m1 0h2m1 0h2m1 0h1m1 0h1m3 0h5m1 0h1m1 0h3m1 0h1M4 8.5h1m1 0h3m1 0h1m1 0h1m6 0h1m1 0h2m2 0h1m2 0h1m1 0h1m1 0h3m1 0h1M4 9.5h1m5 0h1m1 0h1m2 0h2m1 0h4m2 0h1m1 0h1m1 0h1m1 0h1m5 0h1M4 10.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M12 11.5h3m3 0h2m5 0h2m1 0h1M4 12.5h1m1 0h5m3 0h1m2 0h1m1 0h1m1 0h1m4 0h3m1 0h5M4 13.5h2m1 0h1m1 0h1m1 0h1m1 0h1m8 0h4m1 0h2m1 0h2m1 0h4M4 14.5h1m2 0h2m1 0h1m1 0h3m4 0h1m2 0h1m2 0h1m2 0h1m3 0h1m1 0h1M7 15.5h2m2 0h3m1 0h2m1 0h3m2 0h4m2 0h2m1 0h5M4 16.5h1m3 0h1m1 0h3m1 0h3m5 0h2m1 0h1m1 0h1m1 0h1m1 0h3m1 0h2M4 17.5h5m2 0h2m2 0h1m1 0h5m2 0h1m1 0h2m2 0h2m1 0h1m1 0h2M4 18.5h2m1 0h2m1 0h9m4 0h1m2 0h1m2 0h3m1 0h1m1 0h1M4 19.5h1m3 0h1m2 0h1m2 0h1m1 0h1m3 0h1m2 0h5m1 0h2m1 0h3M6 20.5h1m1 0h1m1 0h2m1 0h1m2 0h2m3 0h3m2 0h4m1 0h2m3 0h1M4 21.5h6m2 0h1m1 0h1m3 0h1m1 0h4m3 0h1m2 0h2m1 0h2m1 0h1M5 22.5h2m3 0h2m1 0h2m1 0h6m2 0h1m1 0h1m3 0h3m1 0h1M8 23.5h2m1 0h1m2 0h1m1 0h1m1 0h2m1 0h2m1 0h1m3 0h2m1 0h4m1 0h1M4 24.5h2m1 0h2m1 0h1m3 0h4m2 0h1m3 0h6m1 0h3M4 25.5h4m1 0h1m3 0h1m1 0h1m1 0h1m1 0h1m1 0h2m4 0h1m2 0h1m2 0h1m2 0h1M4 26.5h1m1 0h3m1 0h3m1 0h2m3 0h3m2 0h1m1 0h1m1 0h6m1 0h1M4 27.5h1m4 0h1m4 0h1m3 0h2m5 0h5m1 0h1m1 0h2M4 28.5h1m1 0h3m1 0h1m1 0h1m3 0h1m1 0h2m1 0h1m4 0h1m1 0h5m2 0h2M12 29.5h1m1 0h1m1 0h3m1 0h1m1 0h4m2 0h1m3 0h1m1 0h3M4 30.5h7m4 0h2m1 0h3m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h1M4 31.5h1m5 0h1m1 0h1m1 0h3m1 0h2m4 0h5m3 0h5M4 32.5h1m1 0h3m1 0h1m1 0h1m2 0h1m2 0h2m2 0h2m1 0h1m2 0h6m1 0h2M4 33.5h1m1 0h3m1 0h1m1 0h1m3 0h2m1 0h3m2 0h6m2 0h3m1 0h1M4 34.5h1m1 0h3m1 0h1m1 0h1m1 0h1m2 0h1m5 0h1m2 0h1m1 0h1m1 0h2m1 0h1M4 35.5h1m5 0h1m2 0h4m3 0h1m2 0h4m2 0h2m1 0h3M4 36.5h7m1 0h1m2 0h1m1 0h1m3 0h1m1 0h1m2 0h3m1 0h2m3 0h1'/></svg>"}
+      ],
+      "form": {
+        "fullName": {
+          "label": "Full Name",
+          "placeholder": "Enter your full name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Enter your email"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "Enter your phone number"
+        },
+        "subject": {
+          "label": "Subject",
+          "placeholder": "Enter your subject"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Enter your message"
+        },
+        "submit": "Submit"
+      }
+    }
   }
 }

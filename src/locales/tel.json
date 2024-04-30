@@ -1,32 +1,32 @@
 {
-  "welcome": "సందీప్ పోర్‌ఫోలియోకి స్వాగతం!",
-  "AppName": "సందీప్ పోర్‌ఫోలియోకి",
+  "welcome": "సందీప్ పోర్ట్‌ఫోలియోకి స్వాగతం!",
+  "AppName": "నా పోర్ట్‌ఫోలియో",
   "home": {
     "header": [
       {
         "id": "1",
-        "slideName": "ధ్వని గుర్తించడం",
-        "slideText": "ధ్వని గుర్తించడం సాంకేతిక సాధనాలతో ఉపకరించి, ఉపకరణాలతో హస్తములు పనిచేయడానికి అనుమతిస్తుంది, మాటలను టెక్స్ట్ లాగా లేదా కమాండ్లాగా రూపొందించడానికి. ఇది అనంతరం సంవాద మరియు నియంత్రణకు స్వాభావికంగా మారుతుంది."
+        "slideName": "వాయిస్ రికగ్నిషన్",
+        "slideText": "ఇందులో వాయిస్ రెకగ్నిషన్ టెక్నాలజీ ఉపయోగించబడినది, ఇది మీ సందేశాల కు అనుగునంగా పనిచేస్తుంది"
       },
       {
         "id": "2",
-        "slideName": "Multi language Support",
-        "slideText": "Multi-language support enhances accessibility, allowing users to engage with content in their preferred language for a more inclusive and user-friendly experience."
+        "slideName": "బహుభాషా మద్దతు",
+        "slideText": "బహుభాషా మద్దతు సులభతను అందిస్తుంది, వాడికి అభిరుచిగా ఉండడానికి వాడాలి అనే మరియు పరిస్థితికి అనుగుణంగా కంటెంట్‌తో పరస్పర యోగక్షేమం మరియు యాజమాన్యమైన అనుభవాని అందిస్తుంది."
       },
       {
         "id": "3",
-        "slideName": "Fully Responsive with Animation",
-        "slideText": "Fully responsive with animation, our design adapts seamlessly to various devices while incorporating engaging and dynamic visual elements for an enhanced user experience."
+        "slideName": "పూర్తిగా స్పష్టమైన అనిమేషన్ల తో",
+        "slideText": "అనిమేషన్ తో పూర్తిగా ప్రతిస్థాయితికి అనుకూలంగా అనుసరిస్తుంది, మేము అనేక ఉపకరణాలకు స్వీకరించినా, ఆకర్షక మరియు కొత్తగా చరిత్ర చిత్రాత్మక అంగాలను కలిగించడానికి అనుమతిస్తుంది."
       }
     ],
     "intro": {
       "section": {
-        "title1": "A Brief",
-        "title2": "Introduction"
+        "title1": "స్థానికి",
+        "title2": "సంగతి"
       },
-      "description1": "As a seasoned senior software engineer with more than 5 years of experience, I have honed my expertise in web development, specializing in key technologies like React JS, JavaScript, HTML, and CSS. My commitment to excellence is reflected in a track record of delivering high-quality solutions that seamlessly blend functionality with a visually appealing design. I am deeply passionate about my work, approaching each project with enthusiasm and a results-oriented mindset. My proficiency in React JS enables me to create scalable and efficient user interfaces, while my mastery of JavaScript, HTML, and CSS ensures a holistic and engaging user experience. I thrive in collaborative environments, effectively communicating complex technical concepts and contributing to cross-functional teams. My professional journey underscores adaptability and continuous growth, making me well-equipped to tackle the evolving challenges of web development. I am eager to leverage my skills and passion to contribute to projects that demand cutting-edge solutions and a commitment to excellence.",
-      "description":{
-        "content1": "As an accomplished senior software engineer with over 5 years of expertise, my portfolio serves as a testament to a distinguished career marked by a focus on key technologies and a commitment to excellence in web development. Specializing in prominent frameworks such as React JS, I demonstrate a proficiency in creating scalable and visually compelling user interfaces that elevate the overall user experience.",
+      "description1": "5 సంవత్సరాల ప్రకారం అననుకరించిన అనుభవము ఉన్న అభిజ్ఞాని సీనియర్ సాఫ్ట్‌వేర్ ఇంజనీర్‌గా, నా యొక్క ప్రశాంత్తతో చాలా నాటిచాను. నా యొక్క స్పెషలైజేషన్ చేస్తున్న కంప్యూటర్ సాంప్రదాయిక తరగతులలో React JS, JavaScript, HTML మరియు CSS వంటి ముఖ్యమైన సాంప్రదాయిక నాణ్యతలు నా ఉత్సాహం మరియు ఫలితాల ముందుకు పరిశోధించింది. React JS యొక్క నా నాణ్యతలు యుజర్ ఇంటర్ఫేస్‌ను స్థాయిగా మరియు సరిపరిచే ఉపయోగకోసం వికసించడానికి చాలా సంవేదనశీలతను నిర్వహిస్తుంది. JavaScript, HTML మరియు CSS యొక్క నా మేజరిటీ అనేక సాంప్రదాయిక మరియు ఆకర్షణశీల యుజర్ అనుభవాన్ని ఆవిర్భావించడానికి మరియు సంక్షేమంగా కార్యనిర్వహించడానికి, నాకు ప్రోఫిషియనల్ జర్నీలో ఆనందం మరియు ఫలితాల అరిగిపోవడం ఉంది. నా React JS నాణ్యతల ద్వారా విస్తరించాను, నా JavaScript, HTML మరియు CSS యొక్క నాణ్యతలు ఒక సమగ్ర మరియు ఆకర్షణశీల యుజర్ అనుభవాన్ని ఖచ్చితంగా ఖచ్చితంగా నిర్వహించడానికి నా మౌనంపెట్టాలి. నా వ్యావసాయిక ప్రయాణం ఆడాప్టబిలిటి మరియు కన్నుమూతాలు ఉండే కంపైలు నేర్చేందుకు ఆశాస్వతంగా ఉంది, నాకు తాజాగా అప్లికేషన్ల రూపొందండి మరియు యూజర్ అనుభవాన్ని అభివృద్ధి చేయడానికి ఆకర్షణపరచడం ఉంది.",
+      "description": {
+        "content1": "5 సంవత్సరాల ప్రకారం పరిశోధించానిన అభిజ్ఞాని సాఫ్ట్‌వేర్ ఇంజనీర్‌గా, నా పోర్ట్‌ఫోలియో ఒక ప్రతిష్ఠాత్మక కరివేల చరిత్రను చూపిస్తోంది. కీలక ఫ్రేమ్‌వర్క్‌లు మొదలుగా React JS వంటి ప్రముఖమైన ఫ్రేమ్‌వర్క్‌లతో ప్రవర్తించిపోతున్నాను. ఈ యోగ్యతను తోడ్పాటు చేస్తున్నట్లు, నా పోర్ట్‌ఫోలియోలో యుజర్ ఇంటర్ఫేస్‌ను నిర్మించడానికి మరియు ఆకర్షణశీలమైన డిజైన్ ప్రముఖతను కలిగించడానికి, నా అంతర్యామితో పనులకు ఉత్సాహపడుతున్నాను. React JS యొక్క నా నాణ్యతలు యొక్క దృఢత ద్వారా నాకు సంవత్సరాలు కలిగిన ఉపయోగకేవానికి కనిష్ఠ పరంగా కుటుంబాలు కలిగించడానికి నన్ను అనుకరిస్తుంది. నాకు సహకారభావ వాతావరణాలు నాకు బహుముఖీ పరంపరాగతనం నానాదేవతాన్ని చేతింపి తీసుకోవడానికి సహాయకమవుతున్నాను. నా వ్యావసాయిక ప్రయాణం, అనుభవించే చాలా పరంగా వికసించిన సారిగా, నాకు అంగగాను పరిగణించిన ప్రతిష్ఠాత్మకత మరియు సాధారణత నాకు అనివార్యమైన యొక్కములను నాకు ఆదరపడిస్తుంది. ఈ అంశాలను ఆలోచించడానికి మరియు మాట్లాడడానికి నాకు ఎల్లప్పుడూ పనిచేస్తుంది. నాకు వచ్చే అనుభవం ద్వారా నా కర్మపరాయణత మరియు ఆత్మవిశ్వాసం చూపుతుంది. అంతర్యామిని పనిచేయడం మరియు నన్ను బంధించడం మొదలు చేసిన వాడిగా నా ఆత్మకథనం ఉంది. అందువల్ల, నాకు తలనాడి దారిలో నన్ను ఎదుర్కొనిపేర్చారా? వాటిని కంటెంప్లేట్ చేసేందుకు, పరిశోధనలు మరియు అధ్యయనాలను చేసినంతా దురదృష్టం కలిగించాను, కొంతమంది ప్రత్యేకంగా అనుభవించారా అనే నాకు అంతర్యామితో ఆనందపడుతున్నాను. చాలా అనుభవాలు మరియు అంశాలు కలిగిన సందర్భంగా మరియు అలాగే చాలా మంచిది ఉందని ఆత్మవిశ్వాసం పెంపొందిన అవసరముగా ఉంది. నా ప్రవర్తనలు మరియు అంశాలు సమాచారంగా ఇంటర్నెట్ లో లభిస్తాయి. నా యొక్క వాణిజ్యాను పరిశోధించడానికి మరియు నాకు అంతర్యామిని సంప్రదాయంగా ఉపయోగించడానికి కలిగిన ప్రయత్నం కుదిగిపోవడానికి పరిశోధనలు మరియు అధ్యయనాలను వివరిస్తున్నాను.",
         "content2": "My professional journey reflects a passion for innovation, with a consistent track record of delivering high-quality solutions that seamlessly integrate functionality and aesthetics. With a keen eye for detail, I ensure that each project showcases not only technical prowess but also a commitment to user-centric design principles.",
         "content3": "In addition to my technical acumen, I bring a collaborative spirit to the table, effectively communicating intricate technical concepts and contributing seamlessly to cross-functional teams. My portfolio encapsulates a diverse range of projects, each highlighting adaptability, continuous growth, and a forward-thinking approach to address the dynamic challenges of web development.",
         "content4": "Emphasizing a results-oriented mindset, I am enthusiastic about leveraging my skills to contribute to projects that demand cutting-edge solutions and a dedication to achieving excellence in the ever-evolving landscape of web development. Explore my portfolio to witness a synthesis of technical expertise, creative finesse, and a passion for pushing the boundaries of what is achievable in web development."

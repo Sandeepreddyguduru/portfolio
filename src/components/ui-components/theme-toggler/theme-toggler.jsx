@@ -9,7 +9,8 @@ import './theme-toggle.scss';
 const ThemeToggler = () => {
     const { theme, setTheme } = PortfolioContext()
     const dispatch = useDispatch()
-    const [themeActive, setThemeActive] = useState(false);
+
+    const listThemes = ['light', 'dark', 'system'];
     // const [update, setUpdate] = useState(false);
     const varient = {
         initial: {
@@ -28,28 +29,36 @@ const ThemeToggler = () => {
             borderRadius: '50%',
         }
     }
+    const selectTheme = (e, theme) => {
+        e?.stopPropagation();
+        setTheme(theme);
+        dispatch(updateTheme(theme))
+    }
     return (
-        <motion.div
-            className="portfolio-tabs header-btn theme-menu"
-        // variants={varient}
-        // initial="initial"
-        // animate="animation"
-        // exit="exit"
-        >
-            <motion.button
-                layout
-                whileHover={{ scale: 1 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                // onClick={() => { setTheme(!theme); dispatch(updateTheme(theme ? 'dark' : 'light')) }}
-                onClick={() => { setThemeActive(!themeActive); dispatch(updateTheme(theme)) }}
-                className="portfolio-tab theme-btn"
-            >
-                Themes
-            </motion.button>
+        <div className="menu-section">
+            {listThemes?.map((appTheme, i) => {
+                return (
+                    // <motion.div
+                    //     layout
+                    //     whileHover={{ scale: 1 }}
+                    //     whileTap={{ scale: 0.9 }}
+                    //     transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                    //     onClick={(e) => {e?.stopPropagation(); setTheme(!theme); dispatch(updateTheme(theme)) }}
+                    //     // onClick={() => { setThemeActive(!themeActive); dispatch(updateTheme(theme)) }}
+                    //     className="menu-option"
+                    // >
+                    //     {theme}
+                    // </motion.div>
+                    <div key={i}
+                        className={`menu-option${appTheme === theme ? ' active' : ''}`}
+                        onClick={(e) => { selectTheme(e, appTheme) }}>
+                        {appTheme}
+                    </div>
+                )
+            })}
             {/* <button onClick={() => { dispatch(getProd()) }}>get product</button> */}
             {/* <Snackbar message={'updated theme to ' + (theme ? 'dark' : 'light')} open={update} onClose={() => setUpdate(false)} anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} autoHideDuration={1000} /> */}
-        </motion.div>
+        </div>
     )
 }
 export default ThemeToggler;

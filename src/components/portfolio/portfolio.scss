@@ -1,19 +1,62 @@
 .portfolio-main-app {
   color: var(--base-black);
-  // background-color: var(--theme-bg);
+  background-color: var(--theme-bg);
   // font-size: clamp(12px, 16px, 16px);
   width: 100%;
   position: relative;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // flex-direction: column;
+  // background-attachment: fixed;
+  // padding: 0px 0px;
 
   .portfolio-content {
     // background-color: var(--theme-bg);
     background-color: var(--base-black);
+    // height: 100%;
+    width: 100%;
+    &.menu-expanded{
+      top: 0px;
+      overflow: hidden;
+      height: 100vh;
+      position: absolute;
+      border-radius: 20px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border: 1px solid var(--menu-expanded-border);
+      // @media screen and (max-width: 700px) {
+      //   height: 90vh;
+      // }
+    }
+    &.menu-closed{
+      top: 0px;
+      overflow: hidden;
+      height: 100vh;
+      position: absolute;
+      border-radius: 20px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      // @media screen and (max-width: 700px) {
+      //   height: 90vh;
+      // }
+    }
     // padding: 80px 0px 0px 0px;
   }
 
   .carousel {
     height: 100vh;
     background-color: var(--theme-bg);
+    // background-image: url('../../image/header-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 0px;
 
     .carousel-inner {
       .carousel-title {
@@ -48,13 +91,13 @@
     .features-container {
       display: flex;
       flex-wrap: wrap;
-      max-width: 600px;
+      max-width: 680px;
       border-radius: 24px;
       overflow: hidden;
 
       .feature {
         width: 33.33%;
-        height: 200px;
+        height: 240px;
         padding: 22px;
         @media (min-width: 376px) and (max-width: 767px) {
           width: 50%;
@@ -108,7 +151,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          font-size: 18p;
+          font-size: 18px;
           font-weight: 600;
           color: #000;
           border-radius: 12px;
@@ -120,6 +163,7 @@
 
         .features-text {
           font-size: 13px;
+          margin-bottom: 0px;
         }
 
         &.even-card {
@@ -189,5 +233,15 @@
       color: var(--base-white);
       text-align: center;
     }
+  }
+}
+
+.portfolio-main-mobile{
+  height: 100vh;
+  padding: 60px 24px;
+  background: var(--menu-bg);
+  .portfolio-content{
+    position: absolute;
+    top: 0;
   }
 }
