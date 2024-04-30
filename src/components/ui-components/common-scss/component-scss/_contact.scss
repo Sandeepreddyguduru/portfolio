@@ -1,0 +1,298 @@
+.personal-details-drawer {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: var(--base-white);
+
+    // @media screen and (max-width: 700px) {
+    //   .personal-details-img {
+    //     width: 80px !important;
+    //     height: 80px !important;
+    //     top: -40px !important;
+    //     left: 50% !important;
+    //     transform: translateX(-50%);
+    //     transition: all 0.3s ease;
+    //   }
+    // }
+
+    .personal-details-content {
+      height: 100%;
+
+      .personal-details-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        border: 6px solid #fff;
+        z-index: 0;
+        background: #545c63;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        // @media screen and (max-width: 700px) {
+        //   position: absolute;
+        //   top: 50px;
+        //   left: 50px;
+        //   transition: all 0.3s ease;
+        //   z-index: 2;
+        // }
+      }
+
+      .personal-details {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        // position: absolute;
+        text-align: center;
+        bottom: 0;
+        // max-height: 80%;
+        height: 100%;
+        width: 100%;
+        padding: 60px 24px 24px 24px;
+        overflow: auto;
+        .personal-details-header{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 24px;
+          @media screen and (max-width: 700px) {
+            flex-direction: column;
+          }
+          .personal-details-info{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            @media screen and (max-width: 700px) {
+              align-items: center;
+            }
+          }
+        }
+
+        .owner-email {
+          font-size: 24px;
+        }
+
+        .owner-personal-info {
+          font-size: 14px;
+          color: var(--persional-info);
+          display: flex;
+          justify-content: center;
+          .personal-details-img {
+            z-index: 0;
+          }
+
+          .owner-personal-description {
+            max-width: 400px;
+            text-align: left;
+            @media screen and (max-width: 700px) {
+              text-align: center;
+            }
+          }
+        }
+
+        .owner-personal-nutton-cntr {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          margin: 20px 0px;
+
+          .info-btn {
+            border-radius: 50px;
+            color: #ffffff;
+            height: 45px;
+            width: 120px;
+            border: none;
+            background: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            overflow: hidden;
+
+            &.call-btn {
+              background: #198754;
+
+              .MuiSvgIcon-root {
+                font-size: 20px;
+              }
+
+              &:active {
+                background: #126840;
+              }
+            }
+
+            &.message-btn {
+              width: 140px;
+              background: rgba(13, 110, 253, 1);
+
+              .MuiSvgIcon-root {
+                font-size: 20px;
+              }
+
+              &:active {
+                background: #0756c9;
+              }
+            }
+
+            &.icon-btn {
+              width: 45px;
+              transition: all 0.3s ease;
+            }
+          }
+        }
+
+        .owner-social-accounts-list {
+          // background: #fff;
+          // flex: 1;
+          border-radius: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+          padding: 8px;
+          // overflow: auto;
+
+          .account-card {
+            background: var(--social-account-bg);
+            border: 1px solid var(--social-account-border);
+            flex: 1 1 112px;
+            // width: 50%;
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+
+            &:hover {
+              transform: scale(1.05);
+              transition: all 0.3s ease;
+              box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+              .account-card-name {
+                color: #0d6efd;
+              }
+            }
+
+            .account-card-img {
+              width: 70%;
+              height: 70%;
+              border-radius: 10px;
+
+              svg {
+                width: 100%;
+                height: 100%;
+              }
+            }
+
+            .account-card-name {
+              color: var(--base-white);
+            }
+          }
+        }
+
+        .owner-form-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 40px;
+
+          .account-forms {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            gap: 12px;
+
+            .account-form-input-half-cntr {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 12px;
+              flex: 1;
+
+              @media screen and (max-width: 500px) {
+                .account-form-input-half {
+                  flex: auto;
+                  width: 100%;
+                }
+              }
+            }
+
+            .account-form-input-full,
+            .account-form-input-half {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: flex-start;
+              gap: 4px;
+
+              .account-form-label {
+                width: 100%;
+                display: flex;
+                font-size: 14px;
+              }
+
+              .account-form-input {
+                width: 100%;
+                border-radius: 8px;
+                border: 2px solid transparent;
+                padding: 8px 12px;
+                outline: none;
+                transition: all 0.3s ease;
+                // resize: none;
+
+                &::placeholder{
+                  color: #b9b9b9;
+                }
+
+                &:focus,
+                &:-internal-autofill-selected,
+                &:-webkit-autofill {
+                  border: 2px solid #0d6efd;
+                  transition: all 0.3s ease;
+                  background-color: #fff !important;
+                }
+              }
+            }
+
+            .account-form-input-half {
+              flex: 1;
+            }
+
+            .account-form-input-full {
+              flex: 1 1 100%;
+            }
+          }
+
+          .account-form-submit-btn {
+            border-radius: 50px;
+            color: #ffffff;
+            height: 45px;
+            width: 100%;
+            border: none;
+            background: #198754;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            overflow: hidden;
+
+            &:active {
+              background: #126840;
+            }
+          }
+        }
+      }
+    }
+  }
