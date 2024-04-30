@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.b1dd182b.css",
+    "main.js": "/my-portfolio/static/js/main.32225074.js",
+    "static/js/453.4f81ff10.chunk.js": "/my-portfolio/static/js/453.4f81ff10.chunk.js",
+    "static/media/bg-1.jpg": "/my-portfolio/static/media/bg-1.11e5c960aee50ebe0de5.jpg",
+    "static/media/NotoSerifTelugu-VariableFont_wght.ttf": "/my-portfolio/static/media/NotoSerifTelugu-VariableFont_wght.20c23afbcaee9843cada.ttf",
+    "index.html": "/my-portfolio/index.html",
+    "main.b1dd182b.css.map": "/my-portfolio/static/css/main.b1dd182b.css.map",
+    "main.32225074.js.map": "/my-portfolio/static/js/main.32225074.js.map",
+    "453.4f81ff10.chunk.js.map": "/my-portfolio/static/js/453.4f81ff10.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1dd182b.css",
+    "static/js/main.32225074.js"
+  ]
+}
