@@ -6,9 +6,12 @@ import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
 import MarkunreadRoundedIcon from '@mui/icons-material/MarkunreadRounded';
 import './contact.scss';
 import RevealRandomElement from "../animated/reveal-random/revealRandomElement";
+import {PortfolioContext} from "../portfolio-context/portfolio-context";
 // import { sendEmail } from "../../Node/sendEmail";
 
 const Contact = (props) => {
+    const { theme } = PortfolioContext();
+
     const [tab, setTab] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
@@ -63,25 +66,25 @@ const Contact = (props) => {
                             <div className="account-forms">
                                 <div className="account-form-input-full">
                                     <label className="account-form-label" htmlFor="fullName"><Trans Translate={'footer.contactDetails.form.fullName.label'} /></label>
-                                    <input id="fullName" name="fullName" autoFocus type="text" value={formData?.name} onChange={(e) => setFormData({ ...formData, name: e?.target?.value })} className="account-form-input" placeholder={t('footer.contactDetails.form.fullName.placeholder')} required />
+                                    <input id="fullName" name="fullName" autoFocus type="text" value={formData?.name} onChange={(e) => setFormData({ ...formData, name: e?.target?.value })} className={`account-form-input ${theme+'-theme'}`} placeholder={t('footer.contactDetails.form.fullName.placeholder')} required />
                                 </div>
                                 <div className="account-form-input-half-cntr">
                                     <div className="account-form-input-half">
                                         <label className="account-form-label" htmlFor="email"><Trans Translate={'footer.contactDetails.form.email.label'} /></label>
-                                        <input id="email" name="email" type="email" value={formData?.email} onChange={(e) => setFormData({ ...formData, email: e?.target?.value })} className="account-form-input" placeholder={t('footer.contactDetails.form.email.placeholder')} required />
+                                        <input id="email" name="email" type="email" value={formData?.email} onChange={(e) => setFormData({ ...formData, email: e?.target?.value })} className={`account-form-input ${theme+'-theme'}`} placeholder={t('footer.contactDetails.form.email.placeholder')} required />
                                     </div>
                                     <div className="account-form-input-half">
                                         <label className="account-form-label" htmlFor="phone"><Trans Translate={'footer.contactDetails.form.phone.label'} /></label>
-                                        <input id="phone" name="phone" type="tel" value={formData?.phone} onChange={(e) => setFormData({ ...formData, phone: e?.target?.value })} className="account-form-input" pattern="[0-9]{10}" placeholder={t('footer.contactDetails.form.phone.placeholder')} required />
+                                        <input id="phone" name="phone" type="tel" value={formData?.phone} onChange={(e) => setFormData({ ...formData, phone: e?.target?.value })} className={`account-form-input ${theme+'-theme'}`} pattern="[0-9]{10}" placeholder={t('footer.contactDetails.form.phone.placeholder')} required />
                                     </div>
                                 </div>
                                 <div className="account-form-input-full">
                                     <label className="account-form-label" htmlFor="subject"><Trans Translate={'footer.contactDetails.form.subject.label'} /></label>
-                                    <input id="subject" name="subject" type="text" value={formData?.message} onChange={(e) => setFormData({ ...formData, subject: e?.target?.value })} className="account-form-input" placeholder={t('footer.contactDetails.form.subject.placeholder')} required />
+                                    <input id="subject" name="subject" type="text" value={formData?.subject} onChange={(e) => setFormData({ ...formData, subject: e?.target?.value })} className={`account-form-input ${theme+'-theme'}`} placeholder={t('footer.contactDetails.form.subject.placeholder')} required />
                                 </div>
                                 <div className="account-form-input-full">
                                     <label className="account-form-label" htmlFor="message"><Trans Translate={'footer.contactDetails.form.message.label'} /></label>
-                                    <textarea id="message" name="message" type="text" value={formData?.message} onChange={(e) => setFormData({ ...formData, message: e?.target?.value })} className="account-form-input" rows="3" placeholder={t('footer.contactDetails.form.message.placeholder')} required />
+                                    <textarea id="message" name="message" type="text" value={formData?.message} onChange={(e) => setFormData({ ...formData, message: e?.target?.value })} className={`account-form-input ${theme+'-theme'}`} rows="3" placeholder={t('footer.contactDetails.form.message.placeholder')} required />
                                 </div>
                                 <input className="account-form-submit-btn mt-4" type="submit" value={t('footer.contactDetails.form.submit')} />
                             </div>

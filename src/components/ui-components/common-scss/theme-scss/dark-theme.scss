@@ -10,6 +10,10 @@
     --header-bg: #ffffffb0;
     --header-border: #212529bf;
 
+    //menu
+    --menu-bg: #000;
+    --menu-option-bg: #1C1D21;
+
     //home
         // know more
         --know-more-btn-bg: #ffffff33;
@@ -21,7 +25,17 @@
     //about
     --owner-name-fill: inherit;
     --owner-name-stroke: #ffffff4a;
+    --base-red: #dc3545;
+    --base-blue: #007bff;
+    --input-bg: rgba(33, 37, 41, 0.75);
+    --social-account-bg: rgba(33, 37, 41, 0.75);
+    --social-account-border: rgba(33, 37, 41, 0.75);
+    --persional-info: #abababbf;
 
     //
-    --right-reserved: #ffffff80
+    --right-reserved: #ffffff80;
+
+    // misc
+    --menu-expanded-border: #282828;
+    --menu-separator: #212529bf;
 }

@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import './about.scss'
 import Trans from "../translator/trans";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import RevealElement from "../animated/reveal-element/revealElement";
+import RevealRandomElement from "../animated/reveal-random/revealRandomElement";
+import { PortfolioContext } from "../portfolio-context/portfolio-context";
 
 const About = () => {
+    const {isEnglish} = PortfolioContext();
     const { t } = useTranslation();
+    const mySelf = t('about.aboutMe.description', { returnObjects: true });
     const organizations = t('about.experience.organizations', { returnObjects: true });
     const technical = t('about.technologies.courses', { returnObjects: true });
+
+    const svgAnimateRef = useRef(null)
+    const isInView = useInView(svgAnimateRef, { once: true })
+    
+    const svgAnimateControl = useAnimation()
 
     const techologies = (type) => {
     let icon = '';
@@ -41,17 +52,24 @@ const About = () => {
         return icon;
     };        
 
+    useEffect(() => {
+        if (isInView) {
+            svgAnimateControl?.start('animate');
+        }
+    }, [isInView])
+
     return (
         <div className="portfolio-about">
             <section className="portfolio-main-header">
                 <div className="owner-name">
                     <div className="owner-name-outline"><Trans Translate={'about.my.name'}></Trans></div>
                     <div className="owner-full-name"><Trans Translate={'about.my.fullName'}></Trans></div>
+                    {/* <div className="owner-full-name"><RevealRandomElement className="gap-1" content={'about.my.fullName'} speed={0.06} renderType={'word'}></RevealRandomElement></div> */}
                 </div>
                 <div className="owner-designation-main">
                     <div className="dash-line"></div>
                     <div className="owner-designation">
-                        <Trans Translate={'about.my.designation'}></Trans>
+                        {isEnglish ? <RevealRandomElement className="gap-1" content={'about.my.designation'} speed={ 0.1 } renderType={'word'} animaType={1}/> : <Trans Translate={'about.my.designation'}></Trans>}
                     </div>
                     <div className="dash-line"></div>
                 </div>
@@ -60,8 +78,12 @@ const About = () => {
             <div className="container-fluid section">
                 <div className="container py-5">
                     <div className="section-title">
-                        <div className="section-text-light"><Trans Translate={'about.aboutMe.section.title1'}></Trans></div>
-                        <div className="section-text-high-light"><Trans Translate={'about.aboutMe.section.title2'}></Trans></div>
+                        <div className="section-text-light">
+                            {isEnglish ? <RevealRandomElement content={'about.aboutMe.section.title1'} speed={ 0.05 }/> : <Trans Translate={'about.aboutMe.section.title1'}></Trans>}
+                        </div>
+                        <div className="section-text-high-light">
+                            {isEnglish ? <RevealRandomElement content={'about.aboutMe.section.title2'} speed={ 0.05 }/> : <Trans Translate={'about.aboutMe.section.title2'}></Trans>}
+                        </div>
                     </div>
                     <div className="section-content py-4 about-content">
                         {/* <Trans Translate={'about.aboutMe.content'}></Trans> */}
@@ -93,11 +115,11 @@ const About = () => {
                             <p className="about-content-text">I thrive in dynamic environments where adaptability and innovation are crucial. My professional journey is marked by a commitment to on-time project deliverables, reflecting a disciplined approach to project management and an unwavering dedication to achieving success for both clients and the broader team.</p>
                         </div>
                         <div className="owner-designation-conent about-content">
-                            <p className="about-content-text"><Trans Translate={'about.aboutMe.description.content1'}></Trans></p>
-                            <p className="about-content-text"><Trans Translate={'about.aboutMe.description.content2'}></Trans></p>
-                            <p className="about-content-text"><Trans Translate={'about.aboutMe.description.content3'}></Trans></p>
-                            <p className="about-content-text"><Trans Translate={'about.aboutMe.description.content4'}></Trans></p>
-                            <p className="about-content-text"><Trans Translate={'about.aboutMe.description.content5'}></Trans></p>
+                            {Array?.from({ length: Object?.keys(mySelf)?.length })?.map((text , i) => {
+                                return <RevealElement key={i} className="about-content-text">
+                                    <Trans Translate={'about.aboutMe.description.content' + (i + 1)}></Trans>
+                                </RevealElement>
+                            })}
                         </div>
                     </div>
                 </div>
@@ -106,8 +128,8 @@ const About = () => {
             <div className="experience-container container-fluid section">
                 <div className="container py-5">
                     <div className="section-title">
-                        <div className="section-text-light"><Trans Translate={'about.experience.section.title1'}></Trans></div>
-                        <div className="section-text-high-light"><Trans Translate={'about.experience.section.title2'}></Trans></div>
+                        {isEnglish ? <RevealRandomElement className="section-text-light" content={'about.experience.section.title1'} speed={ 0.05 }/>: <div className="section-text-light"><Trans Translate={'about.experience.section.title1'}></Trans></div>}
+                        {isEnglish ? <RevealRandomElement className="section-text-high-light" content={'about.experience.section.title2'} speed={ 0.05 } /> : <div className="section-text-high-light"><Trans Translate={'about.experience.section.title2'}></Trans></div>}
                     </div>
                     <div className="section-content py-4">
                         <Trans Translate={'about.experience.description'}></Trans>
@@ -123,10 +145,12 @@ const About = () => {
                                     </div>
                                     {org?.description?.length > 0 ?
                                         <ul key={i}>
+                                            <RevealElement key={i}>
                                             {org?.description?.map((list, i) => <li key={i}>{list}</li>)}
+                                            </RevealElement>
                                         </ul>
                                         :
-                                        <div className="experience-info">{org?.content}</div>}
+                                        <RevealElement className="experience-info">{org?.content}</RevealElement>}
                                 </div>
                             )
                         })}
@@ -137,9 +161,9 @@ const About = () => {
             <div className="technical-container container-fluid section py-5">
                 <div className="container">
                     <div className="section-title">
-                        <div className="section-text-high-light"><Trans Translate={'about.technologies.section.title1'}></Trans></div>
-                        <div className="section-text-light"><Trans Translate={'about.technologies.section.title2'}></Trans></div>
-                    </div>
+                        {isEnglish ? <RevealRandomElement className="section-text-high-light" content={'about.technologies.section.title1'} speed={ 0.05 }/> : <div className="section-text-high-light"><Trans Translate={'about.technologies.section.title1'}></Trans></div>}
+                        {isEnglish ? <RevealRandomElement className="section-text-light" content={'about.technologies.section.title2'} speed={ 0.05 }/> : <div className="section-text-light"><Trans Translate={'about.technologies.section.title2'}></Trans></div>}
+                        </div>
                     <div className="section-content py-4">
                         <Trans Translate={'about.technologies.description'}></Trans>
                     </div>
@@ -147,8 +171,16 @@ const About = () => {
                         {technical?.map((tech, i) => {
                             return (
                                 <div key={i} className="tech-card p-2">
-                                    <div className="tech-card-img" dangerouslySetInnerHTML={{__html: techologies(tech?.type)}}></div>
-                                    <div className="tech-name p-2">{tech?.name}</div>
+                                    <motion.div
+                                        key={i}
+                                        initial={{ scale: 0 }}
+                                        animate={{ scale: [0, 1, 1.2, 1] }}
+                                        transition={{duration: 0.3, delay: i * 0.2}}
+                                        ref={svgAnimateRef}
+                                        className="tech-card-img" dangerouslySetInnerHTML={{ __html: techologies(tech?.type) }}></motion.div>
+                                    <div className="tech-name p-2">
+                                        {isEnglish ? <RevealRandomElement randomize={false} speed={ 0.05 } content={tech?.name} animaType={0} renderType={'word'}/> : <Trans Translate={tech?.name}></Trans>}
+                                    </div>
                                 </div>
                             )
                         })}
@@ -159,10 +191,10 @@ const About = () => {
             <div className="work-together-container container-fluid section py-5">
                 <div className="container">
                     <div className="section-title">
-                        <div className="section-text-light"><Trans Translate={'about.workTogether.section.lets'}></Trans></div>
-                        <div className="section-text-light"><Trans Translate={'about.workTogether.section.work'}></Trans></div>
+                        {isEnglish ? <RevealRandomElement className="section-text-light" content={'about.workTogether.section.lets'} speed={ 0.05 }/> : <div className="section-text-light"><Trans Translate={'about.workTogether.section.lets'}></Trans></div>}
+                        {isEnglish ? <RevealRandomElement className="section-text-light" content={'about.workTogether.section.work'} speed={ 0.05 }/> : <div className="section-text-light"><Trans Translate={'about.workTogether.section.work'}></Trans></div>}
                     </div>
-                    <div className="section-text-high-light"><Trans Translate={'about.workTogether.section.together'}></Trans></div>
+                    {isEnglish ? <RevealRandomElement className="section-text-high-light justify-content-center" content={'about.workTogether.section.together'} speed={ 0.05 }/> : <div className="section-text-high-light justify-content-center"><Trans Translate={'about.workTogether.section.together'}></Trans></div>}
                     <div className="section-content py-4">
                         <Trans Translate={'about.workTogether.description'}></Trans>
                     </div>
