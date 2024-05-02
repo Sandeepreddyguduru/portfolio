@@ -2,6 +2,11 @@
   "welcome": "Welcome to sandeep porfolio!",
   "AppName": "my porfolio",
   "home": {
+    "welcome": {
+      "title": "Hey, I'm Sandeep",
+      "subtitle": "A Web Developer",
+      "description": "Step into the realm of endless possibilities, and welcome to my web universe!"
+    },
     "header": [
       {
         "id": "1",
@@ -200,11 +205,13 @@
       ]
     },
     "workTogether": {
+      "contactPage": "Visit contact page",
       "section": {
         "lets": "Let's",
         "work": "Work",
         "together": "Together"
       },
+      "subtext": "I'm always looking for new and exciting projects to work on. Let's connect and discuss potential collaborations or any inquiries you may have.",
       "description": "I extend an invitation to connect and discuss potential collaborations or any inquiries you may have. Your interest is valued, and I am enthusiastic about the opportunity to explore ways in which we can work together to achieve shared success. Please feel free to reach out at your earliest convenience."
     }
   },
@@ -273,6 +280,7 @@
   "footer":{
     "rights": "All rights reserved by",
     "contactDetails": {
+      "title": "Ready to turn your ideas into reality? Contact me and let's start building together!",
       "description": "I'm a passionate web developer, and i am an urban photographer, i like to travel in to the nature and also i use surfing in internet for coding tips",
       "call": "Call",
       "message": "Message",

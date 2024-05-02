@@ -5,7 +5,7 @@ import RevealElement from "../animated/reveal-element/revealElement";
 import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
 import MarkunreadRoundedIcon from '@mui/icons-material/MarkunreadRounded';
 import './contact.scss';
-import RevealRandomElement from "../animated/reveal-random/revealRandomElement";
+import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
 import {PortfolioContext} from "../portfolio-context/portfolio-context";
 // import { sendEmail } from "../../Node/sendEmail";
 
@@ -40,14 +40,14 @@ const Contact = (props) => {
     const social = t('footer.contactDetails.social', { returnObjects: true });
 
     return (
-        <div className={`personal-details-drawer${props?.fromFooter ? '':' contact-tab'}`}>
+        <div className={`personal-details-drawer${props?.fromFooter ? ' contact-drawer':' contact-tab'}`}>
             <div className="personal-details-content">
                 <div className="personal-details">
                     <div className="personal-details-header">
-                        <div className="personal-details-img"></div>
+                        {/* <div className="personal-details-img"></div> */}
                         <div className="personal-details-info">
-                            {/* <div className="owner-email"><Trans Translate={'about.my.fullName'}></Trans></div> */}
-                            <RevealRandomElement className="owner-email" content={'about.my.fullName'} speed={0.1} renderType={'word'} animaType={0}/>
+                            <div className="owner-email"><Trans Translate={'footer.contactDetails.title'}></Trans></div>
+                            {/* <RevealRandomElement className="owner-email" content={'about.my.fullName'} speed={0.1} renderType={'word'} animaType={0}/> */}
                             <div className="owner-personal-info">
                                 <RevealElement className="owner-personal-description">
                                     <Trans Translate={'about.workTogether.description'}></Trans>
@@ -94,6 +94,7 @@ const Contact = (props) => {
                             {social?.map((account, i) => {
                                 return (
                                     <a href={`${account?.type === 'email' ? account?.link : '#'}`} key={i} onClick={(e) => accountPage(e, account)} className="account-card">
+                                        <OpenInNewRoundedIcon />
                                         {account?.icon ? <div className="account-card-img" dangerouslySetInnerHTML={{ __html: account?.icon }}></div> : <div className="account-card-img">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" version="1.1" id="Capa_1" width="800px" height="800px" viewBox="0 0 503.443 503.443">
                                                 <g>

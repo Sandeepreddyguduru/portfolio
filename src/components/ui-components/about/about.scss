@@ -13,7 +13,7 @@
     // align-items: center;
     justify-content: center;
     flex-direction: column;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: var(--mobile-resolution)) {
       height: 30vh;
     }
 
@@ -208,10 +208,75 @@
   }
 
   .work-together-container {
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border-radius: 12px;
+      padding: 40px;
+      background-color: var(--card-bg);
+      @media screen and (max-width: 991px) {
+        gap: 40px;
+        justify-content: center !important;
+        .section-title-left{
+          .section-title {
+            justify-content: center !important;
+          }
+          .section-content {
+            text-align: center !important;
+          }
+        }
+      }
+      .section-title-left{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        max-width: 525px;
+        .section-title {
+          justify-content: left;
+        }
+        .section-content {
+          text-align: left;
+        }
+      }
+      .section-title-right{
+        .contact-email {
+          border-radius: 50px;
+          color: #ffffff;
+          height: 45px;
+          width: 45px;
+          border: none;
+          background: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          background: rgba(13, 110, 253, 1);
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          text-decoration: none;
+        }
+        .contact-btn{
+          border-radius: 50px;
+          color: var(--base-black);
+          height: 45px;
+          // width: 45px;
+          border: none;
+          background: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          background: var(--base-white);
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          padding: 0px 15px;
+        }
+      }
+    }
     .section-text-high-light {
       text-align: center;
       color: var(--base-white);
-      font-size: clamp(2rem, 6vw, 4rem);
+      // font-size: clamp(2rem, 6vw, 4rem);
       font-weight: 600;
     }
 

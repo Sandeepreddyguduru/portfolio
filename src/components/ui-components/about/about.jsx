@@ -6,9 +6,10 @@ import { useTranslation } from "react-i18next";
 import RevealElement from "../animated/reveal-element/revealElement";
 import RevealRandomElement from "../animated/reveal-random/revealRandomElement";
 import { PortfolioContext } from "../portfolio-context/portfolio-context";
+import MailRoundedIcon from '@mui/icons-material/MailRounded';
 
 const About = () => {
-    const {isEnglish} = PortfolioContext();
+    const {isEnglish, setPage, setActive} = PortfolioContext();
     const { t } = useTranslation();
     const mySelf = t('about.aboutMe.description', { returnObjects: true });
     const organizations = t('about.experience.organizations', { returnObjects: true });
@@ -190,17 +191,22 @@ const About = () => {
 
             <div className="work-together-container container-fluid section py-5">
                 <div className="container">
-                    <div className="section-title">
-                        {isEnglish ? <RevealRandomElement className="section-text-light" content={'about.workTogether.section.lets'} speed={ 0.05 }/> : <div className="section-text-light"><Trans Translate={'about.workTogether.section.lets'}></Trans></div>}
-                        {isEnglish ? <RevealRandomElement className="section-text-light" content={'about.workTogether.section.work'} speed={ 0.05 }/> : <div className="section-text-light"><Trans Translate={'about.workTogether.section.work'}></Trans></div>}
+                    <div className="section-title-left">
+                        <div className="section-title">
+                            {isEnglish ? <RevealRandomElement className="section-text-light" content={'about.workTogether.section.lets'} speed={ 0.05 }/> : <div className="section-text-light"><Trans Translate={'about.workTogether.section.lets'}></Trans></div>}
+                            {isEnglish ? <RevealRandomElement className="section-text-high-light" content={'about.workTogether.section.work'} speed={ 0.05 }/> : <div className="section-text-light"><Trans Translate={'about.workTogether.section.work'}></Trans></div>}
+                            {isEnglish ? <RevealRandomElement className="section-text-high-light justify-content-center" content={'about.workTogether.section.together'} speed={ 0.05 }/> : <div className="section-text-high-light justify-content-center"><Trans Translate={'about.workTogether.section.together'}></Trans></div>}
+                        </div>
+                        <div className="section-content">
+                            <Trans Translate={'about.workTogether.subtext'}></Trans>
+                        </div>
                     </div>
-                    {isEnglish ? <RevealRandomElement className="section-text-high-light justify-content-center" content={'about.workTogether.section.together'} speed={ 0.05 }/> : <div className="section-text-high-light justify-content-center"><Trans Translate={'about.workTogether.section.together'}></Trans></div>}
-                    <div className="section-content py-4">
-                        <Trans Translate={'about.workTogether.description'}></Trans>
-                    </div>
-                    <div className="contact-details">
-                        <a href="tel:9494785839" className="contact-phone"><Trans Translate={'about.my.phone'}></Trans></a> |
-                        <a href="mailto:webdev.sandeep.g@gmail.com" className="contact-email"><Trans Translate={'about.my.email'}></Trans></a>
+                    <div className="section-title-right">
+                        <div className="contact-details">
+                        {/* <a href="tel:9494785839" className="contact-phone"><Trans Translate={'about.my.phone'}></Trans></a> | */}
+                            <a href="mailto:webdev.sandeep.g@gmail.com" className="contact-email"><MailRoundedIcon fontSize="medium" /></a>
+                            <button className="contact-btn" onClick={() => { setPage('contact');  setActive(3)}}><Trans Translate={'about.workTogether.contactPage'}></Trans></button>
+                        </div>
                     </div>
                 </div>
             </div>

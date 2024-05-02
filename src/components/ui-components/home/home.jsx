@@ -65,11 +65,13 @@ const Home = () => {
             </div> */}
             {/* Carosel */}
 
-            <header>
-                
+            <header className="portfolio-home container-fluid">
+                <RevealRandomElement renderType={'word'} className="portfolio-home-title bg-card" content={'home.welcome.title'} speed={0.05} />
+                <RevealRandomElement renderType={'word'} className="portfolio-home-title sub-title" content={'home.welcome.subtitle'} speed={0.05}/>
+                <RevealRandomElement renderType={'word'} className="portfolio-home-text" content={'home.welcome.description'} speed={0.05}></RevealRandomElement>
             </header>
 
-            <section className="portfolio-intro container-fluid">
+            <section className="portfolio-intro py-5 container-fluid">
                 <div
                     className=" section container py-5 px-3 text-center">
                     <div className="section-title big-title ">
@@ -96,7 +98,7 @@ const Home = () => {
             </section>
 
 
-            <section className="feature-showcase container-fluid">
+            <section className="feature-showcase py-5 container-fluid">
                 <div className="section container py-5 px-3">
                     <div className="section-title">
                         <div className="section-text-light">{isEnglish ? <RevealRandomElement content={'home.showcase.section.title1'}speed={0.05}></RevealRandomElement> : <Trans Translate={'home.showcase.section.title1'}></Trans>}</div>

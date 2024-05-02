@@ -27,7 +27,7 @@
       border-radius: 20px;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       border: 1px solid var(--menu-expanded-border);
-      // @media screen and (max-width: 700px) {
+      // @media screen and (max-width: var(--mobile-resolution)) {
       //   height: 90vh;
       // }
     }
@@ -38,13 +38,42 @@
       position: absolute;
       border-radius: 20px;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      // @media screen and (max-width: 700px) {
+      // @media screen and (max-width: var(--mobile-resolution)) {
       //   height: 90vh;
       // }
     }
     // padding: 80px 0px 0px 0px;
   }
-
+  .portfolio-home {
+    height: 100vh;
+    color: var(--base-white);
+    background-color: var(--theme-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    .portfolio-home-title {
+      font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+      gap: 8px;
+      &.bg-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        padding: 4px 12px;
+      }
+      &.sub-title {
+        font-size: clamp(2.5rem, 5vw, 5rem);
+        font-weight: 600;
+      }
+    }
+    .portfolio-home-text {
+      max-width: 370px;
+      font-size: 1.1rem;
+      gap: 2px;
+      color: var(--persional-info);
+      justify-content: center;
+    }
+  }
   .carousel {
     height: 100vh;
     // background-color: var(--theme-bg);

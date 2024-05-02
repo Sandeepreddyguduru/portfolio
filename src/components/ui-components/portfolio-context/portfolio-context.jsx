@@ -38,6 +38,13 @@ const AppProvider = ({ children, language, appTheme, appPage, assistanceVoice, p
         setIsExpand(language === 'en' ? true : false)
     }, [language])
 
+    useEffect(() => {
+        let pageScroll = document.querySelector('.App');
+        if (pageScroll) {
+            pageScroll?.scrollTo(0, 0);
+        }
+    }, [page])
+
     const openMenuClick = () => {
         setOpenMenu(!openMenu);
         // let content = document.getElementById('portfolio-content-id')
@@ -54,8 +61,8 @@ const AppProvider = ({ children, language, appTheme, appPage, assistanceVoice, p
     }
 
     const isMobileResolution = () => {
-        setMobile(window.innerWidth <= 700);
-        if (window.innerWidth >= 700) {
+        setMobile(window.innerWidth <= 600);
+        if (window.innerWidth >= 600) {
             setOpenMenu( false );
             closeMenu();
         }
