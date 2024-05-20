@@ -55,12 +55,16 @@ const Contact = (props) => {
                         </div>
                     </div>
                     <div className="owner-personal-nutton-cntr">
-                        <button className={`info-btn message-btn${!contactTab ? ' icon-btn' : ''}`} onClick={(e) => setContactTab(true)}><MarkunreadRoundedIcon />{contactTab && <div><Trans Translate={'footer.contactDetails.message'} /></div>}</button>
+                        <button className={`info-btn message-btn${!contactTab ? ' icon-btn' : ''}`}
+                            // onClick={(e) => setContactTab(true)}
+                        ><MarkunreadRoundedIcon />{contactTab && <div><Trans Translate={'footer.contactDetails.message'} /></div>}</button>
                         <a
                             href="tel:9494785839"
-                            className={`info-btn call-btn${contactTab ? ' icon-btn' : ''}`} onClick={(e) => setContactTab(false)}><LocalPhoneRoundedIcon />{!contactTab && <div><Trans Translate={'footer.contactDetails.call'} /></div>}</a>
+                            className={`info-btn call-btn${contactTab ? ' icon-btn' : ''}`}
+                            // onClick={(e) => setContactTab(false)}
+                        ><LocalPhoneRoundedIcon />{!contactTab && <div><Trans Translate={'footer.contactDetails.call'} /></div>}</a>
                     </div>
-                    {contactTab ?
+                    {!contactTab ?
                         <form className="owner-form-container" onSubmit={(e) => { submitForm(e) }}>
                             <div className="account-forms">
                                 <div className="account-form-input-full">
