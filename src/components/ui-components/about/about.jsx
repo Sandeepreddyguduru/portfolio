@@ -76,7 +76,7 @@ const About = () => {
                 </div>
             </section>
 
-            <div className="container-fluid section">
+            <div id="about" className="container-fluid section">
                 <div className="container py-5">
                     <div className="section-title">
                         <div className="section-text-light">
@@ -126,7 +126,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="experience-container container-fluid section">
+            <div id="experience" className="experience-container container-fluid section">
                 <div className="container py-5">
                     <div className="section-title">
                         {isEnglish ? <RevealRandomElement className="section-text-light" content={'about.experience.section.title1'} speed={ 0.05 }/>: <div className="section-text-light"><Trans Translate={'about.experience.section.title1'}></Trans></div>}
@@ -159,7 +159,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="technical-container container-fluid section py-5">
+            <div id="technologies" className="technical-container container-fluid section py-5">
                 <div className="container">
                     <div className="section-title">
                         {isEnglish ? <RevealRandomElement className="section-text-high-light" content={'about.technologies.section.title1'} speed={ 0.05 }/> : <div className="section-text-high-light"><Trans Translate={'about.technologies.section.title1'}></Trans></div>}
@@ -189,7 +189,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="work-together-container container-fluid section py-5">
+            <div id="work-together" className="work-together-container container-fluid section py-5">
                 <div className="container">
                     <div className="section-title-left">
                         <div className="section-title">
@@ -204,7 +204,7 @@ const About = () => {
                     <div className="section-title-right">
                         <div className="contact-details">
                         {/* <a href="tel:9494785839" className="contact-phone"><Trans Translate={'about.my.phone'}></Trans></a> | */}
-                            <a href="mailto:webdev.sandeep.g@gmail.com" className="contact-email"><MailRoundedIcon fontSize="medium" /></a>
+                            <a href="mailto:webdev.sandeep.g@gmail.com" id="sendEmail" className="contact-email"><MailRoundedIcon fontSize="medium" /></a>
                             <button className="contact-btn" onClick={() => { setPage('contact');  setActive(3)}}><Trans Translate={'about.workTogether.contactPage'}></Trans></button>
                         </div>
                     </div>

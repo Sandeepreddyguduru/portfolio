@@ -17,9 +17,9 @@ const Header = (props) => {
     const { setPage, page, active, setActive, theme, setTheme, headerLists, openMenuClick, mobile, openMenu } = PortfolioContext()
     const dispatch = useDispatch()
 
-    const [isExpand, setIsExpand] = useState(false);
-    const [selectTab, setSelectTab] = useState({ id: 0, name: 'Themes' })
-    const menuTabs = [{ id: 0, name: 'Themes' }, { id: 1, name: 'Languages' }];
+    // const [isExpand, setIsExpand] = useState(false);
+    // const [selectTab, setSelectTab] = useState({ id: 0, name: 'Themes' })
+    // const menuTabs = [{ id: 0, name: 'Themes' }, { id: 1, name: 'Languages' }];
 
     // const openMenuClick = () => {
     //     setOpenMenu(!openMenu);
@@ -54,7 +54,7 @@ const Header = (props) => {
                         return (
                             <div key={i} className="portfolio-tab" onClick={(e) => { e?.stopPropagation(); setActive(list?.id); setPage(list?.name) }}>
                                 {mobile && <div className={`menu-icon${((list?.name === page) || (list?.id === active)) ? ' active-tab' : ''}`}>{ list?.icon }</div>}
-                                <div className={`portfolio-tab-text${((list?.name === page) || (list?.id === active)) ? ' active-tab' : ''}`}>{list?.name}</div>
+                                <div className={`portfolio-tab-text text-capitalize${((list?.name === page) || (list?.id === active)) ? ' active-tab' : ''}`}>{list?.name}</div>
                                 {((list?.name === page) || (list?.id === active)) && <motion.div layoutId='active-pill' transition={{ duration: 0.2 }} className="active"></motion.div>}
                             </div>
                         )

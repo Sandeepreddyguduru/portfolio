@@ -10,7 +10,7 @@ import RevealElement from "../animated/reveal-element/revealElement";
 
 const Home = () => {
     const [selectFeature, setSelectFeature] = useState(null);
-    const { transcript, response, setPage, setActive, animateOnce, isEnglish, openMenu } = PortfolioContext();
+    const { transcript, response, setPage, setActive, animateOnce, isEnglish, openMenu, navigateTo } = PortfolioContext();
 
     const { t } = useTranslation();
     const carousel = t('home.header', { returnObjects: true });
@@ -71,7 +71,7 @@ const Home = () => {
                 <RevealRandomElement renderType={'word'} className="portfolio-home-text" content={'home.welcome.description'} speed={0.05}></RevealRandomElement>
             </header>
 
-            <section className="portfolio-intro py-5 container-fluid">
+            <section id="intro" className="portfolio-intro py-5 container-fluid">
                 <div
                     className=" section container py-5 px-3 text-center">
                     <div className="section-title big-title ">
@@ -87,7 +87,7 @@ const Home = () => {
                         // whileHover={{ scale: 1.04 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                        onClick={() => { setPage('About'); setActive(2)}}
+                        onClick={() => { navigateTo('about') }}
                         className="portfolio-button"
                     >
                         <Trans Translate={'home.intro.knowMore'}></Trans>
@@ -98,7 +98,7 @@ const Home = () => {
             </section>
 
 
-            <section className="feature-showcase py-5 container-fluid">
+            <section id="services" className="feature-showcase py-5 container-fluid">
                 <div className="section container py-5 px-3">
                     <div className="section-title">
                         <div className="section-text-light">{isEnglish ? <RevealRandomElement content={'home.showcase.section.title1'}speed={0.05}></RevealRandomElement> : <Trans Translate={'home.showcase.section.title1'}></Trans>}</div>

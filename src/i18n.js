@@ -14,6 +14,10 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
         translation: require('./locales/tel.json'), // Telugu translation file
       },
   },
+  lng: ['en'],
+  interpolation: {
+    escapeValue: false // React already does escaping
+  }
 });
 
 export default i18n;

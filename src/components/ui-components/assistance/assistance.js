@@ -9,16 +9,37 @@ import { PortfolioContext } from '../portfolio-context/portfolio-context';
 import { updateTheme, toggleVoice, updateLanguage } from '../../../store/actions/app-actions';
 import { useDispatch } from 'react-redux';
 import useMeasure from 'react-use-measure'
+import {
+    // ASSISTANCE_INTRO_COMMANDS,
+    ABOUT_COMMANDS,
+    APP_DARK_MODE_COMMANDS,
+    APP_LIGHT_MODE_COMMANDS,
+    APP_NAVIGATION_COMMANDS,
+    CALL_COMMANDS,
+    CONTACT_PAGE_COMMANDS,
+    EMAIL_COMMANDS,
+    EXPERIENCE_COMMANDS,
+    INTRO_COMMANDS,
+    MUTE_VOICE_ASSISTANCE_COMMANDS,
+    RESET_ASSISTANCE_COMMANDS,
+    SERVICE_COMMANDS,   
+    SOCIAL_ACCOUNTS_COMMANDS,
+    SPEAK_VOICE_ASSISTANCE_COMMANDS,
+    SROLL_COMMANDS,
+    STOP_VOICE_ASSISTANCE_COMMANDS,
+    TECHNOLOGIES_COMMANDS,
+    WORK_TOGETHER_COMMANDS
+} from '../portfolio-constance/commands';
 
 const Assistance = () => {
     const dispatch = useDispatch()
-    const { setPage, page, assistanceVoice, headerLists } = PortfolioContext();
+    const { setTheme, page, assistanceVoice, headerLists, navigateTo, setContactTab, openAccount } = PortfolioContext();
     const [ref, { width }] = useMeasure();
-    
+
     const [isRecording, setIsRecording] = useState(false);
     const [message, setMessage] = useState('');
     const [AIVoice, setAIVoice] = useState('');
-    
+
     useEffect(() => {
         voiceOver(AIVoice)
     }, [AIVoice])
@@ -33,18 +54,19 @@ const Assistance = () => {
     }
 
     const voiceOver = (speckMessage) => {
-        const voice = speechSynthesis.getVoices().find(voice => voice.lang === 'en-US');
+        const voice = speechSynthesis.getVoices().find(voice => voice.lang === 'en-IN');
         let voices = speechSynthesis.getVoices()[19];
-        
+
         let speech = new SpeechSynthesisUtterance(speckMessage);
         speech.lang = voice?.lang
-        speech.rate = 0.5;
+        speech.rate = 1;
         speech.voice = voice;
-        speech.volume = assistanceVoice ? 1:0 || 0;
+        speech.volume = assistanceVoice ? 1 : 0 || 0;
         speechSynthesis.speak(speech);
         speech.onend = () => {
             setTimeout(() => {
-                reset()
+                reset();
+                startListening();
             }, 100);
         }
     }
@@ -56,8 +78,61 @@ const Assistance = () => {
         setIsRecording(false)
     }
 
+    const startListening = () => {
+        SpeechRecognition.startListening({ continuous: true });
+         setIsRecording(true)
+    }
 
-    
+    const navigateToSection = (tab, ele, message) => {
+        navigateTo(tab);
+        if (ele) {
+            setTimeout(() => {
+                let element = document.getElementById(ele);
+                if (element) {
+                    element?.scrollIntoView({ block: 'start', behavior: 'smooth' })
+                }
+                setMessage(message);
+            }, 500);
+        }
+    }
+    // controll
+    const scrollFn = (type) => {
+        let top = 0;
+        let message = 'Srolling';
+        let scrollBar = `${page === 'contact' ? '.personal-details' : '.App'}`;
+        let scroll = document.querySelector(scrollBar);
+        switch (type) {
+            case 'up':
+                // top = scroll?.scrollTop - 150;
+                top = scroll?.scrollTop - ((window?.innerHeight) / 4);
+                message = 'Scrolling up';
+                break;
+            case 'down':
+                // top = scroll?.scrollTop + 150;
+                top = scroll?.scrollTop + ((window?.innerHeight) / 4);
+                message = 'Scrolling down';
+                break;
+            case 'scroll':
+                top = (scroll?.scrollTop + window?.innerHeight);
+                message = 'Scrolling';
+                break;
+            case 'top':
+                top = 0;
+                message = 'Scrolling to top';
+                break;
+            case 'bottom':
+                top = scroll?.scrollHeight;
+                message = 'Scrolling to bottom';
+                break;
+            default:
+                break;
+        }
+        if (scroll) {
+            scroll.scrollTo({ top: top, left: 0, behavior: "smooth" });
+        }
+        setMessage(message)
+    }
+
     const commands = [
         // {
         //     command: 'I would like to order *',
@@ -66,37 +141,37 @@ const Assistance = () => {
 
         // theme
         {
-            command: ['(enable) (set) (apply) light mode', '(enable) (set) (apply) light theme', '(enable) (set) (apply) (app)theme to light', '(enable) (set) (apply) day mode'],
-            callback: () => { dispatch(updateTheme('light')); setMessage('Setting theme to light') },
-            isFuzzyMatch: true,
-            fuzzyMatchingThreshold: 0.5,
+            command: APP_LIGHT_MODE_COMMANDS,
+            callback: () => { dispatch(updateTheme('light')); setTheme('light'); setMessage('Setting theme to light') },
+            // isFuzzyMatch: true,
+            // fuzzyMatchingThreshold: 0.5,
         },
         {
-            command: ['(enable) (set) (apply) dark mode','(enable) (set) (apply) dark theme', '(enable) (set) (apply) (app)theme to dark', '(enable) (set) (apply) night mode'],
-            callback: () => { dispatch(updateTheme('dark')); setMessage('Setting theme to dark') },
-            isFuzzyMatch: true,
-            fuzzyMatchingThreshold: 0.5,
+            command: APP_DARK_MODE_COMMANDS,
+            callback: () => { dispatch(updateTheme('dark')); setTheme('dark'); setMessage('Setting theme to dark') },
+            // isFuzzyMatch: true,
+            // fuzzyMatchingThreshold: 0.5,
         },
 
 
         // redirect
+        // {
+        //     command: ['open home page', 'land on homepage', 'redirect to homepage'],
+        //     callback: () => { navigateTo('home'); setMessage('Opening HOME page') },
+        // },
+        // {
+        //     command: ['open about page', 'land on about page', 'redirect to about page'],
+        //     callback: () => { navigateTo('about'); setMessage('Opening ABOUT page') },
+        // },
         {
-            command: ['open home page', 'land on homepage','redirect to homepage'],
-            callback: () => { setPage('Home'); setMessage('Opening HOME page') },
-        },
-        {
-            command: ['open about page', 'land on about page','redirect to about page'],
-            callback: () => { setPage('About'); setMessage('Opening ABOUT page') },
-        },
-        {
-            command: ['open lab page', 'land on lab page','redirect to lab page'],
-            callback: () => { setPage('Lab'); setMessage('Opening lab page') },
+            command: CONTACT_PAGE_COMMANDS,
+            callback: () => { navigateTo('contact'); setMessage('Opening contact page') },
         },
 
         {
-            command: ['*page', '* page','go to * page','go to *'],
+            command: APP_NAVIGATION_COMMANDS,
             callback: (activePage) => {
-                const PAGE = (activePage[0].toUpperCase() + (activePage.substr(1, page.length)));
+                const PAGE = activePage?.toLowerCase();
                 if (page === PAGE) {
                     setMessage(`you are in ${PAGE} page now`);
                     return
@@ -108,7 +183,7 @@ const Assistance = () => {
                     // }
                     if (list?.name === PAGE) {
                         // console.log("updated", PAGE)
-                        setPage(PAGE)
+                        navigateTo(PAGE);
                         setMessage(`Opening ${PAGE} page`);
                     }
                 }
@@ -125,69 +200,125 @@ const Assistance = () => {
         // },
 
 
-        // 
+        // control
+        //Home
         {
-            command: 'scroll (page) (down)',
-            callback: () => {
-                let scroll = document.getElementById('portfolio-main-app-id');
-                if (scroll) {
-                    scroll.scrollBy({
-                        top: window?.innerHeight,
-                        left: 0,
-                        behavior: "smooth",
-                    });
-                }
-                setMessage('Srolling')
-            },
+            command: INTRO_COMMANDS,
+            callback: () => { navigateToSection('home', 'intro', 'here is introduction of Sandeep') },
+        },
+        {
+            command: SERVICE_COMMANDS,
+            callback: () => { navigateToSection('home', 'services', 'here are the services from Sandeep') },
         },
 
-        // stop
+        // about
         {
-            command: 'stop listening',
-            callback: () => { stopListening() }
+            command: ABOUT_COMMANDS,
+            callback: () => { navigateToSection('about', 'about', 'here you can know more about Sandeep') }
         },
         {
-            command: 'sleep',
+            command: EXPERIENCE_COMMANDS,
+            callback: () => { navigateToSection('about', 'experience', 'here is experience of Sandeep') }
+        },
+        {
+            command: TECHNOLOGIES_COMMANDS,
+            callback: () => { navigateToSection('about', 'technologies', 'here are the technologies served by Sandeep') }
+        },
+        {
+            command: WORK_TOGETHER_COMMANDS,
+            callback: () => { navigateToSection('about', 'work-together', 'here you can mail/get in touch with Sandeep') }
+        },
+
+        // contact - account
+        {
+            command: CALL_COMMANDS,
+            callback: () => {
+                let call = document.querySelector('.info-btn.call-btn');
+                if (call) {
+                    call?.click();
+                    setMessage('Calling Sandeep');
+                }
+            }
+        },
+        {
+            command: EMAIL_COMMANDS,
+            callback: (contactTab) => {
+                if (page === 'contact') {
+                    if (contactTab === 'message') {
+                        setContactTab(true);
+                        setMessage('Opening');
+                    }
+                    if (contactTab === 'social accounts') {
+                        setContactTab(false)
+                        setMessage('Opening');
+                    }
+                }
+            }
+        },
+        {
+            command: SOCIAL_ACCOUNTS_COMMANDS,
+            callback: (link) => {
+                let account = {};
+                let gitList = ['github', 'gudhub', 'git hub', 'githup', 'gitup', 'get hub', 'gitub', 'guitar'];
+                if (gitList?.includes(link?.toLowerCase())) {
+                    account = { type: 'github' }
+                } else {
+                    account = { type: link?.toLowerCase() }
+                }
+                openAccount(account);
+                setMessage(account?.type === 'email' ? `Opening ${account?.type} account` : `Opening ${account?.type} account in new tab`);
+                console.log('account', account);
+            }
+        },
+
+        // scroll
+        {
+            command: SROLL_COMMANDS,
+            callback: (scroll) => {
+                if (scroll?.command || scroll) {
+                    let scrollPage = scroll?.command ? ((scroll?.command?.toLowerCase() === 'scroll') ? 'scroll' : scroll) : scroll;
+                    scrollFn(scrollPage?.toLowerCase());
+                    console.log('scroll', scrollPage);
+                }
+            },
+        },
+        
+        // stop
+        {
+            command: STOP_VOICE_ASSISTANCE_COMMANDS,
             callback: () => { stopListening() }
         },
 
 
         //
         {
-            command: ['reset', 'clear','(reset) (clear) message'],
+            command: RESET_ASSISTANCE_COMMANDS,
             callback: ({ resetTranscript }) => {
                 resetTranscript(); setMessage('')
             }
         },
-        
+
 
         // truning ON/OFF voice
         {
-            command: ['read (ouput) (message) (turn on voice) (recipt)', 'speak', 'speak (ouput) (message)', '(start) (enable) (on) voice over (on) (start) (enable)'],
+            command: SPEAK_VOICE_ASSISTANCE_COMMANDS,
             callback: () => {
                 dispatch(toggleVoice(true));
                 setAIVoice('Voice over enabled')
             },
-            isFuzzyMatch: true,
-            fuzzyMatchingThreshold: 0.5,
+            // isFuzzyMatch: true,
+            // fuzzyMatchingThreshold: 0.5,
         },
-        // {
-        //     command: ['speak'],
-        //     callback: () => {
-        //         dispatch(toggleVoice(true));
-        //         setAIVoice('Voice over enabled')
-        //     }
-        // }, 
         {
-            command: ['mute (assistance) voice', '(off) (disable) Voice over (off) (disable)', '(turn off) Voice (turn off)'],
+            command: MUTE_VOICE_ASSISTANCE_COMMANDS,
             callback: () => {
                 setAIVoice('Voice over disabling')
                 setTimeout(() => {
                     dispatch(toggleVoice(false))
                 }, 100);
             },
-            isFuzzyMatch: true,
-            fuzzyMatchingThreshold: 0.5,
+            // isFuzzyMatch: true,
+            // fuzzyMatchingThreshold: 0.5,
         },
     ]
 
@@ -198,25 +329,25 @@ const Assistance = () => {
         clearTranscriptOnListen,
         browserSupportsSpeechRecognition
     } = useSpeechRecognition({
-        commands, 
-        onNoMatch: () => setMessage('Sorry, try with different query') });
+        commands
+    });
 
     if (!browserSupportsSpeechRecognition) {
         return <span>Browser doesn't support speech recognition.</span>;
     }
 
     return (
-        <MotionConfig transition={{duration: 0.2}}>
-            <div transition={{duration: 0.5}} className={`assistance-box${listening ? ' mic-on' : ' mic-off'}`}>
+        <MotionConfig transition={{ duration: 0.2 }}>
+            <div transition={{ duration: 0.5 }} className={`assistance-box${listening ? ' mic-on' : ' mic-off'}`}>
                 <div className="transcript-box">
                     {!listening ?
                         <SpeedDial
                             variant="contained"
-                            ariaLabel="SpeedDial basic example" 
+                            ariaLabel="SpeedDial basic example"
                             className="assistance-mic"
                             id="speak"
                             icon={<MicIcon />}
-                            onClick={() => { SpeechRecognition.startListening({ continuous: true }); setIsRecording(true) }}></SpeedDial> :
+                            onClick={() => { startListening() }}></SpeedDial> :
                         <SpeedDial
                             variant="contained"
                             ariaLabel="SpeedDial basic example"
@@ -226,25 +357,25 @@ const Assistance = () => {
                             onClick={() => { stopListening() }}>
                         </SpeedDial>
                     }
-                    
+
                     <AnimatePresence>
                         {isRecording &&
                             <motion.div
-                            className="assistance-box-bg"
-                            animate={{ width, scale: 1}}
-                            exit={{ width: '100%' }}
-                            transition={{ scale: {duration: 0.2}}}
+                                className="assistance-box-bg"
+                                animate={{ width, scale: 1 }}
+                                exit={{ width: '100%' }}
+                                transition={{ scale: { duration: 0.2 } }}
                             >
-                            <AnimatePresence>
-                                {isRecording && <div ref={ref} className={`transcript-message${message ? ' got-response':''}`}>
-                                    {listening ?
-                                        <div
-                                            className={`transcript recording${message ? ' shrink' : ''}`}>
-                                            {transcript ? transcript : (listening ? 'Mic is on' : 'Mic is off')}
-                                        </div> : ''}
+                                <AnimatePresence>
+                                    {isRecording && <div ref={ref} className={`transcript-message${message ? ' got-response' : ''}`}>
+                                        {listening ?
+                                            <div
+                                                className={`transcript recording${message ? ' shrink' : ''}`}>
+                                                {transcript ? transcript : (listening ? 'Mic is on' : 'Mic is off')}
+                                            </div> : ''}
                                         {message ? <div className="transcript message">{message || 'Mic is on'}</div> : ''}
-                                </div>}
-                            </AnimatePresence>
+                                    </div>}
+                                </AnimatePresence>
                             </motion.div>}
                     </AnimatePresence>
                 </div>

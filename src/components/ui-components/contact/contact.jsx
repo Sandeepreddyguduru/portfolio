@@ -10,9 +10,8 @@ import {PortfolioContext} from "../portfolio-context/portfolio-context";
 // import { sendEmail } from "../../Node/sendEmail";
 
 const Contact = (props) => {
-    const { theme } = PortfolioContext();
+    const { theme, openAccount, contactTab, setContactTab } = PortfolioContext();
 
-    const [tab, setTab] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         subject: '',
@@ -32,7 +31,7 @@ const Contact = (props) => {
     const accountPage = (e, account) => {
         if (account?.type !== 'email') {
             e.stopPropagation();
-            window?.open(account?.link, '_blank');
+            openAccount(account);
         }
     }
 
@@ -56,12 +55,12 @@ const Contact = (props) => {
                         </div>
                     </div>
                     <div className="owner-personal-nutton-cntr">
+                        <button className={`info-btn message-btn${!contactTab ? ' icon-btn' : ''}`} onClick={(e) => setContactTab(true)}><MarkunreadRoundedIcon />{contactTab && <div><Trans Translate={'footer.contactDetails.message'} /></div>}</button>
                         <a
                             href="tel:9494785839"
-                            className={`info-btn call-btn${tab ? ' icon-btn' : ''}`} onClick={(e) => setTab(false)}><LocalPhoneRoundedIcon />{!tab && <div><Trans Translate={'footer.contactDetails.call'} /></div>}</a>
-                        <button className={`info-btn message-btn${!tab ? ' icon-btn' : ''}`} onClick={(e) => setTab(true)}><MarkunreadRoundedIcon />{tab && <div><Trans Translate={'footer.contactDetails.message'} /></div>}</button>
+                            className={`info-btn call-btn${contactTab ? ' icon-btn' : ''}`} onClick={(e) => setContactTab(false)}><LocalPhoneRoundedIcon />{!contactTab && <div><Trans Translate={'footer.contactDetails.call'} /></div>}</a>
                     </div>
-                    {tab ?
+                    {contactTab ?
                         <form className="owner-form-container" onSubmit={(e) => { submitForm(e) }}>
                             <div className="account-forms">
                                 <div className="account-form-input-full">
